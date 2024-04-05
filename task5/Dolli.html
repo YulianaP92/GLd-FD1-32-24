@@ -8,94 +8,160 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dolli</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Oswald:wght@200..700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body style="background-image: url(images/back.jpg)">
+  <body
+    style="
+      background-image: url(images/back.jpg);
+      font-family: Oswald, sans-serif;
+    "
+  >
     <h1 style="color: #1b4f72; padding-left: 45%">Жизнь Долли</h1>
-    <div style="height: 250px">
-      <div
-        style="
-          width: 200px;
-          height: 200px;
-          float: left;
-          border: 2px solid #1b4f72;
-          background-color: white;
-        "
-      >
-        <img
-          src="images/dolli-photo.jpg"
-          alt="Dolli"
-          style="width: 90%; height: 90%; padding: 10px"
-        />
+    <div style="margin-left: 40px">
+      <div style="height: 250px">
+        <div
+          style="
+            width: 200px;
+            height: 200px;
+            float: left;
+            border: 2px solid #1b4f72;
+            background-color: white;
+          "
+        >
+          <img
+            src="images/dolli-photo.jpg"
+            alt="Dolli"
+            style="width: 90%; height: 90%; padding: 10px"
+          />
+        </div>
+        <p
+          style="
+            color: #1b4f72;
+            text-align: center;
+            padding-top: 30px;
+            font-size: larger;
+            font-weight: bold;
+          "
+        >
+          5 июля 1996 - 14 февраля 2003
+        </p>
       </div>
-      <h3 style="color: #1b4f72; text-align: center; padding-top: 30px">
-        5 июля 1996 - 14 февраля 2003
-      </h3>
-    </div>
-
-    <div>
-      <table
-        border="2"
-        style="
-          background-color: white;
-          border-collapse: collapse;
-          border: solid #1b4f72;
-        "
-      >
-        <caption style="caption-side: bottom; text-align: left">
-          Все данные реальны
-        </caption>
-        <thead>
-          <tr style="background-color: #d6eaf8">
-            <th>Дата</th>
-            <th>События</th>
-            <th>Факты</th>
-          </tr>
-        </thead>
-        <tbody>
-          <col style="background-color: #d6eaf8" />
-          <tr>
-            <td rowspan="2">5 июля 1996 года</td>
-            <td>Рождение</td>
-            <td>Долли родилась в Великобритании</td>
-          </tr>
-          <tr>
-            <td>Дано имя</td>
-            <td>
-              Вначале ей был присвоен только лабораторный идентификационный
-              номер 6LL3
-            </td>
-          </tr>
-          <tr>
-            <td>Апрель 1998 года</td>
-            <td colspan="2">Родился первый ягненок Бонни</td>
-          </tr>
-          <tr>
-            <td>Осень 2001 года</td>
-            <td colspan="2">У Долли был обнаружен артрит</td>
-          </tr>
-          <tr>
-            <td>14 февраля 2003 года</td>
-            <td>Долли пришлось усыпить</td>
-            <td>
-              Причиной послужили прогрессирующее заболевание легких и тяжелый
-              артрит
-            </td>
-          </tr>
-          <tr>
-            <td>9 апреля 2003 года</td>
-            <td colspan="2">
-              Чучело Долли выставлено в Королевском музее Шотландии
-            </td>
-          </tr>
-        </tbody>
-        <tfoot style="background-color: #7fb3d5">
-          <tr>
-            <td colspan="3">
-              Долли стала самой известной овцой в истории науки
-            </td>
-          </tr>
-        </tfoot>
-      </table>
+      <div>
+        <table
+          border="2"
+          style="
+            background-color: white;
+            border-collapse: collapse;
+            border: solid #1b4f72;
+            font-size: small;
+          "
+        >
+          <colgroup>
+            <col
+              style="
+                background-color: #d6eaf8;
+                width: 20%;
+                border-right: 2px solid #1b4f72;
+              "
+            />
+          </colgroup>
+          <caption
+            style="
+              caption-side: bottom;
+              text-align: left;
+              font-weight: bold;
+              font-size: larger;
+            "
+          >
+            * Все данные реальны
+          </caption>
+          <thead>
+            <tr style="background-color: #d6eaf8">
+              <th style="padding: 10px">Дата</th>
+              <th style="width: 40%">События *</th>
+              <th>Факты *</th>
+            </tr>
+          </thead>
+          <tbody style="border-bottom: 2px solid #1b4f72">
+            <tr>
+              <td rowspan="2" style="text-align: center; font-weight: bold">
+                5 июля 1996 года
+              </td>
+              <td>Рождение</td>
+              <td>Долли родилась в Великобритании</td>
+            </tr>
+            <tr>
+              <td>Дано имя</td>
+              <td>
+                Вначале ей был присвоен только лабораторный <br />
+                идентификационный номер 6LL3
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: bold">
+                Апрель 1998 года
+              </td>
+              <td colspan="2">Родился первый ягненок Бонни</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: bold">
+                Осень 2001 года
+              </td>
+              <td colspan="2">У Долли был обнаружен артрит</td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: bold">
+                14 февраля 2003 года
+              </td>
+              <td>Долли пришлось усыпить</td>
+              <td>
+                Причиной послужили прогрессирующее заболевание легких и <br />
+                тяжелый артрит
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center; font-weight: bold">
+                9 апреля 2003 года
+              </td>
+              <td colspan="2">
+                Чучело Долли выставлено в Королевском музее Шотландии
+              </td>
+            </tr>
+          </tbody>
+          <tfoot style="background-color: #7fb3d5">
+            <tr>
+              <td
+                colspan="3"
+                style="text-align: center; padding: 7px; font-weight: bold"
+              >
+                Долли стала самой известной овцой в истории науки
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+        <div
+          style="
+            border: 2px solid #1b4f72;
+            width: 130px;
+            margin-top: 10px;
+            font-weight: bold;
+          "
+        >
+          <a
+            style="
+              text-decoration: none;
+              color: #1b4f72;
+              font-size: larger;
+              background-color: #feece8;
+            "
+            href="Dolli-info.html"
+            >Читать дальше</a
+          >
+        </div>
+      </div>
     </div>
   </body>
 </html>
