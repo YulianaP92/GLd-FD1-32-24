@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Little Web Design</title>
+
+<link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'/>
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'/>
+<link rel="shortcut icon" href="favicon.png" type="image/png"/>
+<style>
+    body, p, span, h1, h2, ul{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: auto;
+    }
+
+    ol, ul{
+       list-style: none;
+          }
+
+    #menu{
+        text-align: center;
+         }
+
+    .header{
+        background-color: #464646;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    ul{
+        display: inline-block;
+        text-align: center;
+        background: #464646;
+        text-align: center;
+        font-family: 'Bitter', serif;
+        font-size: 1.5em;
+    }
+
+    li{
+        display: inline-block;
+        padding: 10px;
+    }
+
+    p{
+        font-family: "Lato", sans-serif;
+        font-size: 1em;
+        color: #474747;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    h1, h2{
+       font-family: 'Bitter', serif;
+       color: #464646;
+       text-align: center;
+       text-transform: uppercase;
+       padding: 40px 0 30px;
+    }
+    h1{
+        font-size: 2.6em;
+    }
+    h2{
+        font-size: 2em;  
+    }
+
+    div[floating="right"]{
+        float: right;
+        width: 40%;
+        margin-right: 100px;
+    }
+
+    [role="label"]{
+       font-size: 0.75em;
+       margin: 20px 0 10px;
+       text-align: left;
+       padding: 0;
+    }
+
+    [role="input"]{
+      height: 20px;
+      border: 1px solid gray;
+      border-radius: 4px;
+      background-color: #fff;
+      cursor: text;
+    }
+
+    div[floating="left"]{
+        float: left;
+        width: 40%;
+        margin-left: 100px;
+    }
+
+    li>a {
+        color: white;
+        text-decoration: none;
+    }
+
+    footer{
+        background-color: #464646;
+        padding: 20px 0;
+    }
+
+    footer p{
+        color: white;
+    }
+
+    #services, table{
+        width: 55%;
+        margin: 0 auto;
+    }
+
+    #services h2 ~ p{
+        font-family: 'Lato', sans-serif;
+        font-size: 1.2em;
+        text-transform: uppercase;
+        color: #425c63;
+        background: #dbeaee;
+        border-radius: 100px;
+        padding: 25px 0;
+        margin: 20px 0;
+    }
+
+    table{
+      border-collapse: collapse;
+    }
+    td:last-child, th:last-child{
+      text-align: right;
+    }
+    th, td{
+      padding: 10px;
+      height: 20px;
+    }
+
+    th{
+      text-align: left;
+    }
+
+    tr:nth-child(odd){
+      background-color: #eee;
+    }
+    tr:first-child{
+      background: #559fb4;
+      color: white;
+    }
+
+    .area div{
+      background-color: #85ddf593;
+      margin-bottom: 20px;
+      border-radius: 40px;
+    }
+
+    #services h2 ~ p:hover{
+        font-weight: 500;
+        color: #fff;
+        background: #dbeaee;
+        background-color: #559fb4;
+        cursor: pointer;
+    }
+
+    .logo:hover{
+      width: 200px;
+    }
+
+    li a:active{
+      color: #b3acac
+
+    }
+
+
+</style>
+</head>
+
+<body>
+  <div class="header">
+    <a href="https://verstaem.online/projects/F&B/">
+      <img class="logo" src="little-web-design-logo.png" alt="Go back to Web Design Studio" title="Go back to Web Design Studio">
+    </a>
+  </div>
+  <div id="menu">
+    <ul>
+      <li><a href="">Features</a></li>
+      <li><a href="">Resources</a></li>
+      <li><a href="">Community</a></li>
+      <li><a href="">Gallery</a></li>
+      <li><a href="">Enterprise</a></li>
+      <li><a href="">Pricing</a></li>
+    </ul>
+  </div>
+
+  <div id="services">
+
+      <h1>Little Web Design Agency</h1>
+
+      <p>We are a small web design agency based in Sheffield, UK. Over the last years we've worked with many companies and made a reputation for building websites that look great and are easy-to-use.</p>
+
+      <p>We always take and shape your ideas and focus on simple, elegant and usable solutions. We bring your project to life with clean and standards-based code using the latest techniques and technologies.</p>
+
+      <h2>Our services</h2>
+
+      <p>Design</p>
+
+      <p>UI / UX</p>
+
+      <p>Content</p>
+  </div>
+
+  <div class="area" style="overflow: hidden;">
+    <div floating="left">
+      <h2>Branding</h2>
+      <p>Ignite your brand's potential and captivate audiences with our strategic design approach. </p>
+    </div>
+    <div floating="right">
+      <h2>Web design</h2>
+      <p>Stand out with our innovative website design that combine aesthetics and usability.</p>
+    </div>
+    <div floating="left">
+      <h2>UI/UX design</h2>
+      <p>Maximize user engagement with our cutting-edge UI/UX design that align with user needs.</p>
+    </div>
+    <div floating="right">
+      <h2>Web app development</h2>
+      <p>Leverage our strategic web app development to create powerful and intuitive online experiences.</p>
+    </div>
+  </div>
+
+  <div class="form" style="width: 50%; margin: 0 auto; clear: both;">
+    <h2>You can ask questions:</h2>
+    <p role="label"> Name:</p>
+    <p role="input"></p>
+    <p role="label"> Email:</p>
+    <p role="input"></p>
+    <p role="label"> Phone:</p>
+    <p role="input"></p>
+  </div>
+
+
+  <h2>Our contacts</h2>
+  <table>
+    <tr>
+      <th>Name</td>
+      <th>Location </td>
+      <th>Email</td>
+    </tr>
+    <tr>
+      <td>Logan Henderson</td>
+      <td>Chicago</td>
+      <td>logan@company.com</td>
+    </tr>
+    <tr>
+      <td>Jacob Gibson</td>
+      <td>Denver</td>
+      <td>jacob@company.com</td>
+    </tr>
+    <tr>
+      <td>Natali Portman</td>
+      <td>Boston</td>
+      <td>natali@company.com</td>
+    </tr>
+    <tr>
+      <td>Chris Wilson</td>
+      <td>New York</td>
+      <td>chris@company.com</td>
+    </tr>
+    <tr>
+      <td>Mark Hader</td>
+      <td>San Francisco</td>
+      <td>mark@company.com</td>
+    </tr>
+    <tr>
+      <td>Eliza Spears</td>
+      <td>Los Angeles</td>
+      <td>eliza@company.com</td>
+    </tr>
+  </table>
+
+  <footer>
+
+    <p>&#169; 2015 Little Web Design Agency</p>
+
+  </footer>
+
+</body>
+
+</html>
