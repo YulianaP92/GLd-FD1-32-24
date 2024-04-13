@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links</title>
+  </head>
+  <style>
+    ul {
+      list-style: none;
+    }
+    a {
+      color: green;
+    }
+    a:hover {
+      color: red;
+    }
+
+    /* option 1 */
+    /* Использовала списки в сочетании с inline-block, который прост в использовании.
+    При уменьшении размера окна браузера элементы располагаются друг за другом, что дает эффект текучей верстки */
+
+    #option1 ul {
+      display: inline-block;
+      text-align: center;
+      padding-left: 0px;
+    }
+
+    #option1 li {
+      display: inline-block;
+      padding: 10px;
+      border-right: 4px solid red;
+    }
+
+    /* option 2 */
+    /* Использовала divs с inline-block. Сначала попробовала просто с inline, который позволяет отобразить блочные элементы в строку, однако элементы начали пересекать
+    друг друга при уменьшении размеров браузера - не хотелось использовать float-left :)*/
+    #option2 div {
+      display: inline-block;
+      padding: 10px;
+      border-right: 4px solid red;
+      /* float: left; */
+    }
+
+    /* option 3 */
+    /* Использовала divs без применения inline. Для обтекания и избегания пересечения элементов
+    при уменьшении размера окна браузера, а также расположении блоков в строку использован float: left */
+    #option3 div {
+      float: left;
+      padding: 10px;
+      border-right: 4px solid red;
+      margin-top: 15px;
+    }
+
+    /* option 4 */
+    /* Использовала ссылки без контейнеров. Для отображении ссылок как блочных элементов был использован display: inline-block; */
+    #option4 {
+      float: left;
+      clear: both;
+    }
+    #option4 a {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 10px;
+      border-right: 4px solid red;
+    }
+
+    /* option 5 */
+    /* Hемного прочитала про флексы, мы их еще не разбирали, однако с помощью них также можно добиться поставленной задачи */
+    #option5 {
+      clear: both;
+    }
+
+    #option5 ul {
+      display: flex;
+      flex-direction: row;
+      float: left;
+      padding-left: 0px;
+    }
+
+    #option5 li {
+      padding: 10px;
+      border-right: 4px solid red;
+    }
+
+    /* summary: если бы нужно было выбрать лучшие варианты - возможно я вы остановилась на Option2,
+      так как в нем меньше кода, однако это в рамках этой задачи. В остальный случаях, наверное, нужно отталкиаться от конкретной ситуации */
+  </style>
+  <body>
+    <div id="option1">
+      <ul>
+        <li><a href="">первая ссылка</a></li>
+        <li><a href="">вторая ссылка</a></li>
+        <li><a href="">третья ссылка</a></li>
+        <li><a href="">четвертая ссылка</a></li>
+        <li><a href="">пятая ссылка</a></li>
+      </ul>
+    </div>
+
+    <div id="option2">
+      <div><a href="">первая ссылка</a></div>
+      <div><a href="">вторая ссылка</a></div>
+      <div><a href="">третья ссылка</a></div>
+      <div><a href="">четвертая ссылка</a></div>
+      <div><a href="">пятая ссылка</a></div>
+    </div>
+
+    <div id="option3">
+      <div><a href="">первая ссылка</a></div>
+      <div><a href="">вторая ссылка</a></div>
+      <div><a href="">третья ссылка</a></div>
+      <div><a href="">четвертая ссылка</a></div>
+      <div><a href="">пятая ссылка</a></div>
+    </div>
+
+    <div id="option4">
+      <a href="">первая ссылка</a>
+      <a href="">вторая ссылка</a>
+      <a href="">третья ссылка</a>
+      <a href="">четвертая ссылка</a>
+      <a href="">пятая ссылка</a>
+    </div>
+
+    <div id="option5">
+      <ul>
+        <li><a href="">первая ссылка</a></li>
+        <li><a href="">вторая ссылка</a></li>
+        <li><a href="">третья ссылка</a></li>
+        <li><a href="">четвертая ссылка</a></li>
+        <li><a href="">пятая ссылка</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
