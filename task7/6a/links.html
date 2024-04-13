@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links</title>
+  </head>
+  <style>
+    ul {
+      list-style: none;
+    }
+    a {
+      color: green;
+    }
+    a:hover {
+      color: red;
+    }
+
+    /* option 1 */
+    #option1 ul {
+      display: inline-block;
+      text-align: center;
+      font-family: "Bitter", serif;
+      padding-left: 0px;
+    }
+
+    #option1 li {
+      display: inline-block;
+      padding: 10px;
+      border-right: 4px solid red;
+    }
+
+    /* option 2 */
+    #option2 div {
+      display: inline;
+      padding: 10px;
+      border-right: 4px solid red;
+    }
+
+    /* option 3 */
+    #option3 div {
+      float: left;
+      padding: 10px 12px 10px 10px;
+      border-right: 4px solid red;
+      margin-top: 20px;
+    }
+
+    /* option 4 */
+    #option4 {
+      float: left;
+    }
+    #option4 a {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 10px;
+      border-right: 4px solid red;
+    }
+
+    /* option 5 */
+    #option5 ul {
+      display: flex;
+      flex-direction: row;
+      float: left;
+      padding-left: 0px;
+    }
+
+    #option5 li {
+      padding: 10px;
+      border-right: 4px solid red;
+    }
+  </style>
+  <body>
+    <div id="option1">
+      <ul>
+        <li><a href="">первая ссылка</a></li>
+        <li><a href="">вторая ссылка</a></li>
+        <li><a href="">третья ссылка</a></li>
+        <li><a href="">четвертая ссылка</a></li>
+        <li><a href="">пятая ссылка</a></li>
+      </ul>
+    </div>
+
+    <div id="option2">
+      <div><a href="">первая ссылка</a></div>
+      <div><a href="">вторая ссылка</a></div>
+      <div><a href="">третья ссылка</a></div>
+      <div><a href="">четвертая ссылка</a></div>
+      <div><a href="">пятая ссылка</a></div>
+    </div>
+
+    <div id="option3">
+      <div><a href="">первая ссылка</a></div>
+      <div><a href="">вторая ссылка</a></div>
+      <div><a href="">третья ссылка</a></div>
+      <div><a href="">четвертая ссылка</a></div>
+      <div><a href="">пятая ссылка</a></div>
+    </div>
+
+    <div id="option4">
+      <a href="">первая ссылка</a>
+      <a href="">вторая ссылка</a>
+      <a href="">третья ссылка</a>
+      <a href="">четвертая ссылка</a>
+      <a href="">пятая ссылка</a>
+    </div>
+
+    <div id="option5">
+      <ul>
+        <li><a href="">первая ссылка</a></li>
+        <li><a href="">вторая ссылка</a></li>
+        <li><a href="">третья ссылка</a></li>
+        <li><a href="">четвертая ссылка</a></li>
+        <li><a href="">пятая ссылка</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
