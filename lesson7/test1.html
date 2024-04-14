@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 100px;
+      }
+      ul {
+        margin: 0;
+      }
+
+      div:first-child span:first-child {
+        color: #f00;
+      }
+
+      .list1 {
+        margin-bottom: -15px;
+      }
+
+      .list1 li {
+        padding-bottom: 15px;
+      }
+
+      .list1 li:last-child {
+        padding-bottom: -15px;
+      }
+
+      div:last-child span:last-child {
+        color: #0000ff;
+      }
+
+      .list2 li:nth-child(even) {
+        padding-bottom: 15px;
+      }
+
+      .list2 {
+        margin-bottom: -15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>Текст вверху без отступа от списка.</span>
+      <ul class="list1">
+        <li>Маша</li>
+        <li>Паша</li>
+        <li>Даша</li>
+        <li>Женя</li>
+        <li>Саша</li>
+        <li>Гоша</li>
+      </ul>
+      <span>Текст внизу без отступа от списка.</span>
+    </div>
+    <div>
+      <span>Текст вверху без отступа от списка.</span>
+      <ul class="list2">
+        <li>Маша</li>
+        <li>Паша</li>
+        <li>Даша</li>
+        <li>Женя</li>
+        <li>Саша</li>
+        <li>Гоша</li>
+      </ul>
+      <span>Текст внизу без отступа от списка.</span>
+    </div>
+  </body>
+</html>

@@ -164,7 +164,7 @@
     }
 
     .logo:hover{
-      width: 200px;
+      opacity: 0.5;
     }
 
     li a:active{
@@ -172,6 +172,25 @@
 
     }
 
+    p[role="label"]:first-of-type::after{
+      content: "*";
+      color: red;
+      margin-left: 5px;
+    }
+
+    tr > td:first-of-type:hover::before{
+      content: "\1F642";
+      margin-right: 5px;
+    }
+
+    .form h2:first-of-type::after{
+      content: "your messages will be proceed whithin 3 days";
+      font-size: 0.4em;
+      font-family: 'Lato', sans-serif;
+      color: #559fb4;
+      text-transform: lowercase;
+      display: block;
+    }
 
 </style>
 </head>
