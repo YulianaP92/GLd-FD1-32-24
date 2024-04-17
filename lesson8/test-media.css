@@ -1,0 +1,18 @@
+@import "test-media-standart.css";
+
+.row .column {
+  float: left;
+  width: 25%;
+}
+
+@media screen and (max-width: 992px) {
+  .row .column {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .row .column {
+    width: 100%;
+  }
+}

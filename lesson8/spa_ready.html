@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Спа пакеты</title>
+    <style>
+      body,
+      ul,
+      p,
+      h1,
+      h2 {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      .header {
+        background-image: url("png-clipart-removebg-preview.png");
+        background-repeat: no-repeat;
+        height: 400px;
+        text-align: right;
+      }
+      .header p {
+        font-size: 60px;
+        font-weight: bold;
+        color: #0b5345;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 100px 0 0 100px;
+      }
+      .header div {
+        display: inline-block;
+        border: 1px solid black;
+        font-size: 25px;
+        color: #0b5345;
+        margin: 50px 350px 0 0;
+        padding: 20px;
+      }
+
+      .header div:not(:last-of-type) {
+        margin-right: 20px;
+      }
+      .description,
+      .time,
+      .price {
+        display: inline-block;
+        margin: 20px 0 20px 50px;
+        width: 40%;
+      }
+
+      .time,
+      .price {
+        vertical-align: top;
+        padding-top: 20px;
+        width: 20%;
+        font-style: italic;
+      }
+      ul > li {
+        padding: 10px 0 0 40px;
+      }
+      .title {
+        font-size: 40px;
+        color: #0b5345;
+      }
+      .steps,
+      .price {
+        font-size: 25px;
+      }
+      .price,
+      .time {
+        color: #0b5345;
+      }
+      .header div:hover,
+      .block-package:hover {
+        background-color: #81aea52b;
+      }
+
+      @media screen and (max-width: 1560px) {
+        .header {
+          background-size: 30% auto;
+        }
+        .header div {
+          margin-right: 20px;
+        }
+      }
+      @media screen and(max-width: 1060px) {
+        .header {
+          background: none;
+          text-align: center;
+          height: auto;
+        }
+        .header div {
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div><a>О салоне</a></div>
+      <div><a>Новости и Акции</a></div>
+      <div><a>Сертфикаты</a></div>
+      <div><a>Контакты</a></div>
+      <p>Спа пакеты</p>
+    </div>
+    <div class="block-package">
+      <div class="description">
+        <p class="title">Spa пакет Gold Relax для одного человека</p>
+        <p class="steps">Этапы процедуры:</p>
+        <ul>
+          <li>Посещение банно-термального комплекса 3 часа.</li>
+          <li>Скрабирование кожи кремовым скрабом Шоколад.</li>
+          <li>Обертывание (маска для тела Шоколад).</li>
+          <li>Растирание тела с использованием массажного крема Шоколад.</li>
+        </ul>
+      </div>
+      <p class="time">4 часа 20 минут</p>
+      <p class="price">125,00 BYN</p>
+    </div>
+    <div class="block-package">
+      <div class="description">
+        <p class="title">Spa пакет LUX Gold для одного</p>
+        <p class="steps">Этапы процедуры:</p>
+        <ul>
+          <li>Посещение банно-термального комплекса 3 часа.</li>
+          <li>
+            СПА-процедура на выбор: программа Релакс Аромагия с использованием
+            массажного масла/ Глубокое скрабирование тела
+          </li>
+        </ul>
+      </div>
+      <p class="time">5 часов 30 минут</p>
+      <p class="price">170,00 BYN</p>
+    </div>
+    <div class="block-package">
+      <div class="description">
+        <p class="title">Spa пакет Relax для 2-х человек</p>
+        <p class="steps">Этапы процедуры:</p>
+        <ul>
+          <li>Посещение банно-термального комплекса 3 часа.</li>
+          <li>
+            СПА-процедура на выбор: программа Релакс Аромагия с использованием
+            массажного масла/ Глубокое скрабирование тела
+          </li>
+        </ul>
+      </div>
+      <p class="time">3 часа 30 минут</p>
+      <p class="price">160,00 BYN</p>
+    </div>
+    <div class="block-package">
+      <div class="description">
+        <p class="title">Spa пакет LUX Relax для двоих</p>
+        <p class="steps">Этапы процедуры:</p>
+        <ul>
+          <li>Аква зона + Посещение банно-термального комплекса 3 часа.</li>
+          <li>Скрабирование кожи кремовым скрабом для тела Манго.</li>
+          <li>Обертывание (маска для тела Манго).</li>
+          <li>Растирание тела с использованием массажного крема Манго.</li>
+        </ul>
+      </div>
+      <p class="time">5 часов</p>
+      <p class="price">250,00 BYN</p>
+    </div>
+  </body>
+</html>
