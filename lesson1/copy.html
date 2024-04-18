@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" sizes="32x32" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Oswald:wght@200..700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Potter</title>
+    <style type="text/css">
+      span {
+        color: rgb(255, 0, 0);
+      }
+      .p-style {
+        text-indent: 20px;
+        font-family: Pacifico, cursive;
+      }
+      .menu-heros {
+        float: left;
+        margin-bottom: 5px;
+      }
+      .heros {
+        float: left;
+        margin-left: 50px;
+        margin-top: -30%;
+        padding-left: 5px;
+      }
+      .images-heros {
+        width: 50px;
+        height: 70px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .div-text {
+        float: left;
+        margin-top: 20px;
+      }
+      .list {
+        font-size: small;
+        padding-right: 30px;
+      }
+
+      h2 {
+        text-align: center;
+        font-family: "Edu NSW ACT Foundation, cursive";
+      }
+
+      h2 p {
+        text-align: center;
+      }
+
+      body p + p {
+        font-family: Lobster, sans-serif;
+      }
+
+      body > div {
+        margin-right: 10%;
+      }
+
+      body > div > div:first-child:nth-child(1) {
+        text-transform: uppercase;
+      }
+
+      ol {
+        font-weight: bold;
+        padding-left: 30px;
+      }
+
+      ul {
+        padding-left: 0;
+        list-style-type: none;
+      }
+
+      /* от 0 до 600 */
+      /* @media screen and (max-width: 600px) {
+        div div + div div {
+          width: 100%;
+          float: left;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        div div {
+          float: none;
+        }
+      } */
+
+      body > div > div:first-child:nth-child(1) p {
+        font-size: large;
+        margin: auto;
+        font-weight: bolder;
+      }
+
+      body > div > div:last-child {
+        margin-left: 200px;
+      }
+
+      body > div > div:first-child {
+        float: left;
+        width: 200px;
+        font-family: Roboto, sans-serif;
+      }
+
+      @media screen and (max-width: 600px) {
+        /* 
+        body div div:first-child {
+          width: 100%;
+          float: right;
+        } */
+        body > div > div:last-child {
+          width: 100%;
+          float: left;
+          width: 100%;
+          margin-left: 10px;
+        }
+
+        body > div > div:first-child {
+          width: 100%;
+          float: right;
+          position: absolute;
+          bottom: 0px;
+          height: 0;
+        }
+
+        body > div {
+          margin-right: 10px;
+          display: inline-block;
+          position: relative;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Серия романов о Гарри Поттере</h2>
+    <p><img src="images/potter-all.jpg" width="200" /></p>
+    <p>
+      Самая знаменитая сага новейшего времени разошлась рекордным тиражом -
+      более 400 миллионов экземпляров на 68 языках (включая эсперанто,
+      древнегреческий и латынь). Книги Роулинг сумели оторвать детей и взрослых
+      от экранов компьютеров и стали мощнейшим импульсом для интереса к чтению в
+      современную эпоху.
+    </p>
+    <hr />
+    <div>
+      <div>
+        <div>
+          <div>
+            <p>книги цикла</p>
+            <div>
+              <ol class="list">
+                <li><a href="">гарри поттер и философский камень</a></li>
+                <li><a href="">гарри поттер и тайная комната</a></li>
+                <li><a href="">гарри поттер и узник азкабана</a></li>
+                <li><a href="">гарри поттер и кубок огня</a></li>
+                <li><a href="">гарри поттер и орден феникса</a></li>
+                <li><a href="">гарри поттер и принц полукровка</a></li>
+                <li><a href="">гарри поттер и дары смерти</a></li>
+                <li><a href="">гарри поттер и проклятое дитя</a></li>
+              </ol>
+            </div>
+          </div>
+          <div>
+            <p style="font-size: large; margin: auto; font-weight: bolder">
+              популярные герои
+            </p>
+          </div>
+          <div>
+            <ul class="list">
+              <li>
+                <div class="menu-heros">
+                  <a href="">
+                    <img
+                      src="images/Lord_Voldemort.webp"
+                      style="
+                        width: 50px;
+                        display: inline-block;
+                        vertical-align: middle;
+                      "
+                      alt="Том Реддл"
+                  /></a>
+                </div>
+                <div class="heros" style="margin-right: 10px">Том Реддл</div>
+              </li>
+              <li>
+                <div class="menu-heros">
+                  <a href="">
+                    <img
+                      class="images-heros"
+                      src="images/potter-1-photo.jpg"
+                      alt="Гарри Поттер"
+                  /></a>
+                </div>
+                <div class="heros">Гарри Поттер</div>
+              </li>
+              <li>
+                <div class="menu-heros">
+                  <a href="">
+                    <img
+                      class="images-heros"
+                      src="images/Dambldor.jpg"
+                      alt="Альбус Дамблдор"
+                  /></a>
+                </div>
+                <div class="heros">Альбус Дамблдор</div>
+              </li>
+              <li>
+                <div class="menu-heros">
+                  <a href="">
+                    <img
+                      class="images-heros"
+                      src="images/Grin-de-Vald.webp"
+                      alt="Геллерт Грин-де-Вальд"
+                  /></a>
+                </div>
+                <div class="heros">Геллерт Грин-де-Вальд</div>
+              </li>
+              <li>
+                <div class="menu-heros">
+                  <a href="">
+                    <img
+                      class="images-heros"
+                      src="images/severus-snegg.jpg"
+                      alt="severus snegg"
+                  /></a>
+                </div>
+                <div class="heros">Северус Снегг</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background-color: rgba(222, 184, 135, 0.487); float: left">
+          <p style="float: left; margin: 10px">
+            <img src="images/potter -1.jpg" width="150" />
+          </p>
+          <p class="p-style">
+            <span>Ж</span>изнь десятилетнего Гарри Поттера нельзя назвать
+            сладкой: его родители умерли, едва ему исполнился год, а от дяди и
+            тётки, взявших сироту на воспитание, достаются лишь тычки да
+            подзатыльники. Но в одиннадцатый день рождения Гарри всё меняется.
+            Странный гость, неожиданно появившийся на пороге, приносит письмо,
+            из которого мальчик узнаёт, что на самом деле он чистокровный
+            волшебник и принят в Хогвартс — школу магии. А уже через пару недель
+            Гарри будет мчаться в поезде Хогвартс-экспресс навстречу новой
+            жизни, где его ждут невероятные приключения, верные друзья и самое
+            главное — ключ к разгадке тайны смерти его родителей.
+          </p>
+        </div>
+        <div
+          class="div-text"
+          style="background-color: rgba(224, 71, 104, 0.487)"
+        >
+          <p style="float: left; margin: 10px">
+            <img src="images/potter -2.jpg" width="150" />
+          </p>
+          <p class="p-style">
+            <span>Э</span>то вторая книга о приключениях Гарри Поттера. Он снова
+            вступает в отчаянную схватку со злом. На этот раз враг его так
+            силен, что надежды на победу почти нет. В Школе чародейства и
+            волшебства «Хогвартс» происходят тревожные события. Кто-то нападает
+            на учеников школы, и преподаватели подозревают, что это таинственное
+            чудовище, которое скрывается в легендарной Тайной комнате. Гарри
+            Поттер и его друзья разгадывают загадку Тайной комнаты, и теперь
+            Гарри снова предстоит сразиться с лордом Волан-де-Мортом. Сумеет ли
+            он победить на этот раз?
+          </p>
+        </div>
+        <div
+          class="div-text"
+          style="background-color: rgba(113, 107, 99, 0.487)"
+        >
+          <p style="float: left; margin: 10px">
+            <img src="images/potter -3.jpg" width="150" />
+          </p>
+          <p class="p-style">
+            <span>Д</span>венадцать долгих лет в Азкабане - мрачной тюрьме
+            волшебного мира - содержался всем известный узник по имени Сириус
+            Блэк. Его обвиняли в убийстве тринадцати человек и считали
+            наследником лорда Волан-де Морта. И вот он бежал,и из оставленных им
+            следов ясно, что на этот раз убийца поставил целью избавиться от
+            Гарри Поттера. Теперь Гарри в опасности, даже за стенами соей
+            волшебной школы, даже среди друзей - потому что среди них есть
+            предатель, готовый открыть убийце путь в Хогвартс.
+          </p>
+        </div>
+        <div
+          style="text-align: center; height: 50px; padding: 20px; clear: both"
+        >
+          &copy; Росмэн <br />
+          2024
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
