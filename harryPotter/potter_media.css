@@ -1,0 +1,69 @@
+@media screen and (max-width: 1000px) {
+  body div:last-of-type {
+    float: none;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  div.div_left_side ol {
+    font-size: large;
+    padding: 10px;
+    margin-left: 25%;
+  }
+
+  div#copy {
+    display: none;
+  }
+  body div:first-of-type {
+    width: 100%;
+  }
+  p#books {
+    text-align: center;
+  }
+
+  ul.list {
+    padding-right: 0px;
+  }
+  ul li {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  p#heros {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  ul div.heros {
+    width: 80px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  div.menu-heros {
+    display: none;
+  }
+  ul li {
+    display: block;
+  }
+  ul div.heros {
+    margin: 0px auto;
+    padding-top: 10px;
+  }
+
+  ul li:first-of-type div:last-of-type {
+    margin-left: auto;
+  }
+
+  ul div.heros {
+    width: 100% !important;
+  }
+
+  div.div_left_side ol {
+    font-size: small;
+  }
+
+  ul.list {
+    text-align: center;
+  }
+}

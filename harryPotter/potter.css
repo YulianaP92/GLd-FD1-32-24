@@ -1,0 +1,131 @@
+h2 {
+  text-align: center;
+  font-family: Edu NSW ACT Foundation, cursive;
+}
+
+body > p:first-of-type {
+  text-align: center;
+}
+
+body > p:last-of-type {
+  font-family: Lobster, sans-serif;
+}
+
+body > div {
+  margin-right: 10%;
+}
+
+span {
+  color: rgb(255, 0, 0);
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+ol {
+  font-weight: bold;
+  padding-left: 30px;
+}
+
+#copy {
+  text-align: center;
+  height: 50px;
+  padding: 20px;
+  clear: both;
+}
+
+#books {
+  font-size: large;
+  margin: auto;
+  font-weight: bolder;
+}
+
+#voldemort {
+  width: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.p-style {
+  text-indent: 20px;
+  font-family: Pacifico, cursive;
+}
+.menu-heros {
+  float: left;
+  margin-bottom: 5px;
+}
+.heros {
+  float: left;
+  margin-left: 50px;
+  margin-top: -30%;
+  padding-left: 5px;
+}
+.images-heros {
+  width: 50px;
+  height: 70px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.div-text {
+  float: left;
+  margin-top: 20px;
+}
+.list {
+  font-size: small;
+  padding-right: 30px;
+}
+
+.div_right_side {
+  float: right;
+  width: 85%;
+}
+
+.div_left_side {
+  float: left;
+  width: 15%;
+  font-family: Roboto, sans-serif;
+}
+
+.div_right_side > div:first-of-type {
+  background-color: rgba(222, 184, 135, 0.487);
+  float: left;
+}
+
+.p_floating {
+  float: left;
+  margin: 10px;
+}
+
+.heros p {
+  font-size: large;
+  margin: auto;
+  font-weight: bolder;
+}
+
+p#heros {
+  font-weight: bold;
+}
+
+.div_uppercase {
+  text-transform: uppercase;
+}
+
+/* @media screen and (max-width: 800px) {
+  body div > div {
+    float: none !important;
+  }
+  body div div {
+    width: 100% !important;
+  }
+} */
+
+.div_right_side p:first-of-type {
+  float: left;
+  margin: 10px;
+}
+
+ul > li:first-of-type > div:last-of-type {
+  margin-right: 10px;
+}

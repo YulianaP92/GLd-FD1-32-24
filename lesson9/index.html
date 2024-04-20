@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <style>
+      label,
+      p,
+      button {
+        font-weight: bold;
+      }
+
+      label {
+        margin: 6px 0;
+        display: block;
+      }
+
+      .book-genre,
+      .film-genre {
+        display: none;
+      }
+
+      legend {
+        background-color: rgb(128, 128, 128);
+        font-size: 1.2em;
+        color: #fff;
+        padding: 3px 6px;
+        border-radius: 6px;
+      }
+      fieldset {
+        background-color: rgb(225, 226, 227);
+        width: 30%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+      input,
+      textarea,
+      select,
+      button {
+        padding: 5px 10px;
+        font-size: 1em;
+      }
+
+      input[type="text"]:focus {
+        border: none;
+        outline: 2px solid red;
+      }
+
+      input[type="radio"]:checked + span {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      .book-genre,
+      .film-genre {
+        display: none;
+      }
+      input[value="book"]:checked ~ .book-genre {
+        display: block;
+      }
+
+      input[value="film"]:checked ~ .film-genre {
+        display: block;
+      }
+
+      input[type="text"]::placeholder {
+        font-style: italic;
+      }
+    </style>
+    <form action="https://fe.it-academy.by/TestForm.php" method="get">
+      <fieldset>
+        <legend>Информация о вас</legend>
+        <label for="name">Ваше имя</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Введите имя"
+          maxlength="30"
+        />
+        <label for="age">Ваш возраст</label>
+        <input type="text" name="age" id="age" value="25" maxlength="2" />
+      </fieldset>
+      <fieldset>
+        <legend>Ваши предпочтения</legend>
+        <p>Вы предпочитаете</p>
+        <input type="radio" name="preferences" value="book" checked />
+        <span>Книги</span>
+        <input type="radio" name="preferences" value="film" />
+        <span>Фильмы</span>
+        <div class="book-genre">
+          <p>Выберите жанр книг</p>
+          <select name="genre">
+            <option value="romance" selected>роман\мелодрама</option>
+            <option value="comedy">приключения\комедия</option>
+            <option value="historical">документальный\исторический</option>
+            <option value="science fiction">научная фантастика</option></select
+          ><br />
+        </div>
+        <div class="film-genre">
+          <p>Выберите жанр фильма</p>
+          <select name="film-genre">
+            <option value="romance" selected>роман\мелодрама</option>
+            <option value="comedy">приключения\комедия</option>
+            <option value="historical">документальный\исторический</option>
+            <option value="science fiction">научная фантастика</option></select
+          ><br />
+        </div>
+        <label>Комментарий по препочитаемым жанрам</label>
+        <textarea name="comment">Я предпочитаю...</textarea><br />
+      </fieldset>
+      <span>Даете согласие на получение рассылки? </span>
+      <input type="checkbox" name="agreement" value="yes" checked />
+      <br />
+      <input type="hidden" name="location" value="Belarus" />
+      <br />
+      <button type="submit">Отправить анкету &#9989;</button>
+      <button type="reset">Заполнить заново &#128260;</button>
+    </form>
+  </body>
+</html>
