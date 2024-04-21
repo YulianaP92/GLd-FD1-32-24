@@ -35,9 +35,15 @@ div {
 }
 
 @media screen and (max-width: 600px) {
+  form {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   input[id="name"],
   select[id="heading"] {
     width: 100%;
+    float: none;
   }
   label {
     width: 55%;
@@ -54,6 +60,10 @@ div {
   }
 
   div#last + br {
+    display: none;
+  }
+
+  input[id="name"] + br {
     display: none;
   }
 }
