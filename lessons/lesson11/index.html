@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/d23624fc6e.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .liner-gradient {
+        width: 300px;
+        height: 300px;
+        background-image: repeating-linear-gradient(
+          to top right,
+          #14a555 60px,
+          #24d24a 120px,
+          #27cf6d 121px
+        );
+      }
+      .repeat-gradient {
+        width: 300px;
+        height: 300px;
+        background-image: linear-gradient(
+          90deg,
+          rgb(205, 3, 168),
+          rgb(236, 0, 0),
+          blue
+        );
+        background-size: 100px 100%;
+      }
+      .repeating-liner-gradient {
+        width: 300px;
+        height: 300px;
+        background-image: repeating-linear-gradient(
+          to top right,
+          #034320 60px,
+          #24d24a 120px,
+          #012c13 121px
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <i class="fa-solid fa-phone-volume"></i>
+    <picture>
+      <source media="(max-width: 610px)" srcset="610x300.jpg" />
+      <source media="(max-width: 1017px)" srcset="1017x500.jpg" />
+      <source media="(max-width: 1220px)" srcset="1220x600.jpeg" />
+      <img src="1220x600.jpeg" alt="" />
+
+      <iframe
+        width="420"
+        height="420"
+        src="https://www.youtobe.com/embed/RQ6fdJYQ8kM"
+        allowfullscreen
+      ></iframe>
+
+      <div class="liner-gradient"></div>
+      <br />
+      <div class="repeat-gradient"></div>
+      <br />
+      <div class="repeating-liner-gradient"></div>
+      <br />
+    </picture>
+  </body>
+</html>
