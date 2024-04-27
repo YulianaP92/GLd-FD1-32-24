@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <title>Concerts</title>
+    <script
+      src="https://kit.fontawesome.com/d23624fc6e.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .main {
+        font-family: "Raleway", sans-serif;
+      }
+      header,
+      footer {
+        width: 100%;
+        background-color: #262626;
+        color: white;
+        position: fixed;
+      }
+
+      header {
+        top: 0px;
+        z-index: 1;
+      }
+      footer {
+        bottom: 0px;
+      }
+
+      header p {
+        padding-left: 20px;
+        float: left;
+      }
+
+      .fa-masks-theater:before {
+        padding-left: 10px;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      header ul {
+        float: right;
+        padding-right: 20px;
+      }
+
+      header ul li {
+        display: inline;
+        padding-left: 5px;
+        text-align: center;
+      }
+
+      svg {
+        transform: rotate(45deg);
+        background-color: white;
+        margin-bottom: 2.5px;
+      }
+
+      iframe {
+        margin-top: 60px;
+      }
+
+      .video {
+        margin-left: 10%;
+      }
+
+      article ul.container {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      article ul.container > li {
+        height: 80px;
+        background-color: #d3d3d3;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+        padding-left: 10px;
+        position: relative;
+      }
+
+      article ul.container > li {
+        display: inline-block;
+      }
+
+      article ul.container > li p {
+        /* position: absolute;
+        top: 5px;
+        left: 50%; */
+        text-align: center;
+      }
+
+      article ul li img {
+        height: 80px;
+        width: 120px;
+      }
+
+      .details {
+        /* position: absolute;
+        top: 50px;
+        left: 47%; */
+        text-align: center;
+        /* padding-left: 0px; */
+      }
+
+      .details li {
+        display: inline-block;
+        padding-right: 10px;
+      }
+
+      .details li:last-child {
+        margin-bottom: 110px;
+      }
+
+      footer ul {
+        float: right;
+        padding-right: 20px;
+      }
+
+      footer p {
+        padding-left: 20px;
+        float: left;
+      }
+
+      .container div {
+        height: 80px;
+        position: absolute;
+        top: 5px;
+        left: 40%;
+        width: 350px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <p>
+          Сайт Концертно-Экскурсионных Программ<i
+            class="fa-solid fa-masks-theater"
+          ></i>
+        </p>
+        <ul>
+          <li>Афиша</li>
+          <li>
+            <svg width="5" height="5" xmlns="http://www.w3.org/2000/svg"></svg>
+          </li>
+          <li>Заказ билетов</li>
+          <li>
+            <svg width="5" height="5" xmlns="http://www.w3.org/2000/svg"></svg>
+          </li>
+          <li>Контакты</li>
+        </ul>
+      </header>
+      <article>
+        <div class="video">
+          <iframe
+            width="40%"
+            height="200px"
+            src="https://www.youtube.com/embed/haofmamF8XE"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="40%"
+            height="200px"
+            src="https://www.youtube.com/embed/3aait4aOxP0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <ul class="container">
+          <li>
+            <img src="images/poster__image.png" />
+            <div>
+              <p>Опера VS Оперетта</p>
+              <ul class="details">
+                <li><i class="fa-solid fa-music"></i> Опера</li>
+                <li><i class="fa-solid fa-clock"></i> 19.00</li>
+                <li><i class="fa-solid fa-calendar-days"></i> 3 мая</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <img src="images/slider-img-1.png" />
+            <div>
+              <p>Концерт Мосфильм против Голливуда</p>
+              <ul class="details">
+                <li><i class="fa-solid fa-clock"></i> 17.00</li>
+                <li><i class="fa-solid fa-calendar-days"></i> 4 мая</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <img src="images/preview-the-concert.jpg" />
+            <div>
+              <p>Концерт скрипки с оркестром</p>
+              <ul class="details">
+                <li><i class="fa-solid fa-music"></i> Симфония</li>
+                <li><i class="fa-solid fa-clock"></i> 12.00</li>
+                <li><i class="fa-solid fa-calendar-days"></i> 9 мая</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <img src="images/vivaldi.jpg" />
+            <div>
+              <p>Антонио Вивальди. Времена года</p>
+              <ul class="details">
+                <li><i class="fa-solid fa-music"></i> Симфония</li>
+                <li><i class="fa-solid fa-clock"></i> 19.00</li>
+                <li><i class="fa-solid fa-calendar-days"></i> 9 мая</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <img src="images/Picovaya-dama.jpg" />
+            <div>
+              <p>Чайковский П.И. Опера «Пиковая дама»</p>
+              <ul class="details">
+                <li><i class="fa-solid fa-music"></i> Опера</li>
+                <li><i class="fa-solid fa-clock"></i> 19.00</li>
+                <li><i class="fa-solid fa-calendar-days"></i> 11 мая</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <img src="images/slider__main-image.png" />
+            <div>
+              <p>Опера VS Оперетта</p>
+              <ul class="details">
+                <li><i class="fa-solid fa-music"></i> Опера</li>
+                <li><i class="fa-solid fa-clock"></i> 17.00</li>
+                <li><i class="fa-solid fa-calendar-days"></i> 12 мая</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </article>
+      <footer>
+        <p><i class="fa-solid fa-masks-theater"></i></p>
+        <ul>
+          <li>
+            <svg width="5" height="5" xmlns="http://www.w3.org/2000/svg"></svg>
+            <span>г. Санкт-Петербург, Невский пр., д.1</span>
+          </li>
+          <li>
+            <svg width="5" height="5" xmlns="http://www.w3.org/2000/svg"></svg>
+            <span>concert@mail.ru</span>
+          </li>
+          <li>
+            <svg width="5" height="5" xmlns="http://www.w3.org/2000/svg"></svg>
+            <span>(812) 123-45-67</span>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
