@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        height: 100px;
+        background: linear-gradient(70deg, gray, #2471a3, #1a5276);
+        color: #eff7fe;
+      }
+
+      header ul a {
+        text-decoration: none;
+        color: #eff7fe;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      header ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      header li {
+        margin: 10px;
+        padding: 10px;
+      }
+
+      header a:hover {
+        background-color: gray;
+        border-color: white;
+      }
+      h1 {
+        margin-left: 20px;
+        margin-bottom: 0px;
+      }
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 4;
+      }
+
+      #filter {
+        flex-grow: 1;
+      }
+
+      #filter ul {
+        padding-left: 20px;
+      }
+
+      #filter ul li:first-of-type {
+        color: #1a5276;
+        font-weight: bold;
+      }
+
+      #filter ul li:not(:first-child)::before {
+        content: "\25A1";
+        padding-right: 5px;
+      }
+
+      #container {
+        flex-grow: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>TopHotels</h1>
+      <ul>
+        <li><a href="#home">Жилье</a></li>
+        <li><a href="#about">Варианты досуга</a></li>
+        <li><a href="#services">Туры</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </header>
+    <main>
+      <div id="filter">
+        <ul>
+          <li>Все фильтры</li>
+          <li>Только 5*</li>
+          <li>Только в Беларуси</li>
+          <li>С парковкой</li>
+          <li>С бассейном</li>
+          <li>Дома для отпуска</li>
+        </ul>
+      </div>
+      <div id="container"></div>
+    </main>
+  </body>
+</html>
