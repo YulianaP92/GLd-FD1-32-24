@@ -54,42 +54,23 @@
         width: 25%;
       }
 
-      #filter ul {
-        padding-left: 20px;
-      }
-
-      #filter ul li:first-of-type {
+      #filter p {
         color: #1a5276;
         font-weight: bold;
-      }
-
-      #filter ul li:not(:first-child)::before {
-        content: "\25A1";
-        padding-right: 5px;
+        margin-bottom: 0px;
       }
 
       #container {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
         width: 75%;
         margin-top: 10px;
+        flex-direction: row;
+        justify-content: space-between;
         flex-wrap: wrap;
-      }
-      #row_1 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-      }
-      #row_2 {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 10px;
       }
 
       #container img {
-        width: 80%;
+        width: 70%;
         height: 150px;
       }
 
@@ -103,6 +84,7 @@
         border: 1px solid #1a5276;
         border-radius: 5px;
         width: 32%;
+        margin-top: 10px;
       }
 
       .cell ul {
@@ -124,6 +106,12 @@
         content: "\203A";
         padding-right: 10px;
       }
+
+      @media screen and (max-width: 600px) {
+        .cell {
+          width: 42%;
+        }
+      }
     </style>
   </head>
   <body>
@@ -138,93 +126,92 @@
     </header>
     <main>
       <div id="filter">
-        <ul>
-          <li>Все фильтры</li>
-          <li>Только 5*</li>
-          <li>Только в Беларуси</li>
-          <li>С парковкой</li>
-          <li>С бассейном</li>
-          <li>Дома для отпуска</li>
-        </ul>
+        <p>Все фильтры</p>
+        <input type="checkbox" />
+        <label>Только 5*</label><br />
+        <input type="checkbox" />
+        <label>Только в Беларуси</label><br />
+        <input type="checkbox" />
+        <label>С парковкой</label><br />
+        <input type="checkbox" />
+        <label>С бассейном</label><br />
+        <input type="checkbox" />
+        <label>Дома для отпуска</label><br />
       </div>
       <div id="container">
-        <div id="row_1">
-          <div class="cell">
-            <p>Гостиница Беларусь</p>
-            <div>
-              <div class="img">
-                <img src="1.jpg" alt="" />
-              </div>
-              <ul>
-                <li>Бесплатная парковка</li>
-                <li>Бесплатный WiFi</li>
-                <li>Бассейн</li>
-                <li>Фитнес-центр</li>
-                <li>Бесплатный завтрак</li>
-              </ul>
-            </div>
-          </div>
-          <div class="cell">
-            <p>Минск Марриотт Отель</p>
+        <div class="cell">
+          <p>Гостиница Беларусь</p>
+          <div>
             <div class="img">
-              <img src="2.jpg" alt="" />
+              <img src="1.jpg" alt="" />
             </div>
             <ul>
               <li>Бесплатная парковка</li>
               <li>Бесплатный WiFi</li>
-              <li>Джакузи</li>
+              <li>Бассейн</li>
               <li>Фитнес-центр</li>
-              <li>Бар/лаунж</li>
-            </ul>
-          </div>
-          <div class="cell">
-            <p>DoubleTree by Hilton Hotel Minsk</p>
-            <div class="img">
-              <img src="3.jpg" alt="" />
-            </div>
-            <ul>
-              <li>Бесплатный WiFi</li>
-              <li>Джакузи</li>
-              <li>Фитнес-центр</li>
-              <li>Бар/лаунж</li>
+              <li>Бесплатный завтрак</li>
             </ul>
           </div>
         </div>
-        <div id="row_2">
-          <div class="cell">
-            <p>Отель Atlantis The Palm 5* - Дубаи</p>
-            <div class="img">
-              <img src="4.jpg" alt="" />
-            </div>
-            <ul>
-              <li>Бесплатная парковка</li>
-              <li>Бесплатный WiFi</li>
-              <li>Бассейн</li>
-              <li>Фитнес-центр</li>
-            </ul>
+        <div class="cell">
+          <p>Минск Марриотт Отель</p>
+          <div class="img">
+            <img src="2.jpg" alt="" />
           </div>
-          <div class="cell">
-            <p>Burj Al Arab Jumeirah - Дубаи</p>
-            <div class="img">
-              <img src="5.webp" alt="" />
-            </div>
-            <ul>
-              <li>Бесплатная парковка</li>
-              <li>Бесплатный WiFi</li>
-              <li>Бассейн</li>
-              <li>Кухня</li>
-            </ul>
+          <ul>
+            <li>Бесплатная парковка</li>
+            <li>Бесплатный WiFi</li>
+            <li>Джакузи</li>
+            <li>Фитнес-центр</li>
+            <li>Бар/лаунж</li>
+          </ul>
+        </div>
+        <div class="cell">
+          <p>DoubleTree by Hilton Hotel Minsk</p>
+          <div class="img">
+            <img src="3.jpg" alt="" />
           </div>
-          <div class="cell">
-            <p>Усадьба Треугольный дом шалаш</p>
-            <div class="img">
-              <img src="6.jpg" alt="" />
-            </div>
-            <ul>
-              <li>Бесплатная парковка</li>
-              <li>Кухня</li>
-            </ul>
+          <ul>
+            <li>Бесплатный WiFi</li>
+            <li>Джакузи</li>
+            <li>Фитнес-центр</li>
+            <li>Бар/лаунж</li>
+          </ul>
+        </div>
+        <div class="cell">
+          <p>Отель Atlantis The Palm 5* - Дубаи</p>
+          <div class="img">
+            <img src="4.jpg" alt="" />
           </div>
+          <ul>
+            <li>Бесплатная парковка</li>
+            <li>Бесплатный WiFi</li>
+            <li>Бассейн</li>
+            <li>Фитнес-центр</li>
+          </ul>
+        </div>
+        <div class="cell">
+          <p>Burj Al Arab Jumeirah - Дубаи</p>
+          <div class="img">
+            <img src="5.webp" alt="" />
+          </div>
+          <ul>
+            <li>Бесплатная парковка</li>
+            <li>Бесплатный WiFi</li>
+            <li>Бассейн</li>
+            <li>Кухня</li>
+          </ul>
+        </div>
+        <div class="cell">
+          <p>Усадьба Треугольный дом шалаш</p>
+          <div class="img">
+            <img src="6.jpg" alt="" />
+          </div>
+          <ul>
+            <li>Бесплатная парковка</li>
+            <li>Кухня</li>
+          </ul>
         </div>
       </div>
     </main>
