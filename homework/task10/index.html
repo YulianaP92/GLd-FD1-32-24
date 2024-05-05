@@ -14,6 +14,7 @@
       header ul a {
         text-decoration: none;
         color: #eff7fe;
+        font-size: large;
       }
 
       ul {
@@ -45,11 +46,12 @@
       main {
         display: flex;
         flex-wrap: wrap;
-        flex-grow: 4;
+        flex-direction: row;
       }
 
       #filter {
-        flex-grow: 1;
+        justify-content: flex-start;
+        width: 25%;
       }
 
       #filter ul {
@@ -67,7 +69,60 @@
       }
 
       #container {
-        flex-grow: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 75%;
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+      #row_1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      #row_2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+
+      #container img {
+        width: 80%;
+        height: 150px;
+      }
+
+      #container p {
+        font-weight: bold;
+        color: #1a5276;
+        margin: 0;
+      }
+
+      .cell {
+        border: 1px solid #1a5276;
+        border-radius: 5px;
+        width: 32%;
+      }
+
+      .cell ul {
+        margin-top: 0px;
+      }
+
+      .cell p {
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+
+      .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .cell ul li::before {
+        content: "\203A";
+        padding-right: 10px;
       }
     </style>
   </head>
@@ -92,7 +147,86 @@
           <li>Дома для отпуска</li>
         </ul>
       </div>
-      <div id="container"></div>
+      <div id="container">
+        <div id="row_1">
+          <div class="cell">
+            <p>Гостиница Беларусь</p>
+            <div>
+              <div class="img">
+                <img src="1.jpg" alt="" />
+              </div>
+              <ul>
+                <li>Бесплатная парковка</li>
+                <li>Бесплатный WiFi</li>
+                <li>Бассейн</li>
+                <li>Фитнес-центр</li>
+                <li>Бесплатный завтрак</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cell">
+            <p>Минск Марриотт Отель</p>
+            <div class="img">
+              <img src="2.jpg" alt="" />
+            </div>
+            <ul>
+              <li>Бесплатная парковка</li>
+              <li>Бесплатный WiFi</li>
+              <li>Джакузи</li>
+              <li>Фитнес-центр</li>
+              <li>Бар/лаунж</li>
+            </ul>
+          </div>
+          <div class="cell">
+            <p>DoubleTree by Hilton Hotel Minsk</p>
+            <div class="img">
+              <img src="3.jpg" alt="" />
+            </div>
+            <ul>
+              <li>Бесплатный WiFi</li>
+              <li>Джакузи</li>
+              <li>Фитнес-центр</li>
+              <li>Бар/лаунж</li>
+            </ul>
+          </div>
+        </div>
+        <div id="row_2">
+          <div class="cell">
+            <p>Отель Atlantis The Palm 5* - Дубаи</p>
+            <div class="img">
+              <img src="4.jpg" alt="" />
+            </div>
+            <ul>
+              <li>Бесплатная парковка</li>
+              <li>Бесплатный WiFi</li>
+              <li>Бассейн</li>
+              <li>Фитнес-центр</li>
+            </ul>
+          </div>
+          <div class="cell">
+            <p>Burj Al Arab Jumeirah - Дубаи</p>
+            <div class="img">
+              <img src="5.webp" alt="" />
+            </div>
+            <ul>
+              <li>Бесплатная парковка</li>
+              <li>Бесплатный WiFi</li>
+              <li>Бассейн</li>
+              <li>Кухня</li>
+            </ul>
+          </div>
+          <div class="cell">
+            <p>Усадьба Треугольный дом шалаш</p>
+            <div class="img">
+              <img src="6.jpg" alt="" />
+            </div>
+            <ul>
+              <li>Бесплатная парковка</li>
+              <li>Кухня</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
