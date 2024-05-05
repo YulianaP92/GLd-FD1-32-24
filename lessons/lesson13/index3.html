@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-box {
+        display: flex;
+        font-size: xx-large;
+        text-align: center;
+      }
+      .base {
+        height: 210px;
+        background-color: green;
+        flex-grow: 2;
+        margin: 10px;
+        align-content: center;
+      }
+      .side-itm {
+        background-color: blue;
+        height: 100px;
+        margin-top: 10px;
+        align-content: center;
+      }
+
+      .side {
+        flex-grow: 1;
+        /* margin-bottom: 10px; */
+      }
+
+      @media screen and (max-width: 600px) {
+        .flex-box {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+        }
+        .side {
+          flex-wrap: wrap;
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          justify-content: space-between;
+        }
+        .side-itm {
+          width: 45%;
+          margin: 10px;
+          /* align-content: center; */
+        }
+      }
+
+      @media screen and (max-width: 450px) {
+        .flex-box {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+        }
+        .side {
+          flex-wrap: wrap;
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          justify-content: space-between;
+        }
+        .side-itm {
+          width: 100%;
+          margin: 10px;
+          /* align-content: center; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-box">
+      <div class="base">1</div>
+      <div class="side">
+        <div class="side-itm">2</div>
+        <div class="side-itm">3</div>
+      </div>
+    </div>
+  </body>
+</html>

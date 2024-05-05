@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .card {
+        display: inline-block;
+        border: 1px solid #ccc; /* Параметры рамки */
+        padding: 20px; /* Поля вокруг картинки */
+        margin: 30px; /* Отступ справа */
+        box-shadow: 0 0 10px #ccc; /* Добавляем тень */
+      }
+      img {
+        width: 350px;
+      }
+      .rotate:hover {
+        transform: rotate(10deg);
+        transition: 3s;
+      }
+      .skewX:hover {
+        transform: skewX(-10deg);
+      }
+      .scaleX:hover {
+        transform: scaleX(0.5);
+      }
+
+      .translateX:hover {
+        transform: translateX(50px);
+      }
+
+      .perspective:hover {
+        transform: perspective(500px) rotate3d(30, 90, 0, 40deg);
+      }
+
+      .satur:hover {
+        filter: saturate(5);
+      }
+
+      .blur:hover {
+        filter: blur(4px);
+      }
+
+      .color-rotate:hover {
+        filter: hue-rotate(90deg);
+      }
+
+      .clip-path {
+        clip-path: circle(40%);
+      }
+      .clip-path-2 {
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+      }
+      .clip-path-3 {
+        clip-path: path("M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z");
+      }
+    </style>
+    <div class="card rotate"><img src="1.jpg" alt="" /></div>
+    <div class="card skewX"><img src="2.jpg" alt="" /></div>
+    <div class="card scaleX"><img src="5.jpg" alt="" /></div>
+    <div class="card translateX"><img src="1.jpg" alt="" /></div>
+    <div class="card perspective"><img src="2.jpg" alt="" /></div>
+    <div class="card satur"><img src="6.jpg" alt="" /></div>
+    <div class="card blur"><img src="2.jpg" alt="" /></div>
+    <div class="card color-rotate"><img src="6.jpg" alt="" /></div>
+    <div class="card"><img class="clip-path" src="6.jpg" alt="" /></div>
+    <div class="card"><img class="clip-path-2" src="6.jpg" alt="" /></div>
+    <div class="card"><img class="clip-path-3" src="6.jpg" alt="" /></div>
+  </body>
+</html>
