@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Oswald:wght@200..700&family=Pacifico&family=Poetsen+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d23624fc6e.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Travel</title>
+    <style>
+      .gridContainer {
+        display: grid;
+        /* grid-template-areas:
+          "header header header"
+          "article article article"
+          "footer footer footer"; */
+        /* grid-template-rows: 60px 1fr 60px;
+        grid-template-columns: 20% 1fr 15%; */
+        grid-gap: 10px;
+        height: 100vh;
+        margin: 0;
+      }
+
+      header {
+        background-color: rgb(126, 186, 239);
+        color: rgb(30, 48, 80);
+        text-align: center;
+        height: 60px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+      }
+
+      header p {
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        text-shadow: 1px 1px 2px white;
+        margin-top: 0;
+      }
+
+      header ul {
+        /* margin-right: 5px; */
+        list-style-type: none;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 6px 6px white;
+        margin-top: 20px;
+      }
+
+      header ul li {
+        display: inline;
+        margin: 10px;
+        padding: 10px;
+        /* margin-right: 5px; */
+      }
+
+      header ul li i {
+        padding-left: 5px;
+      }
+
+      header,
+      footer {
+        border: 1px solid;
+      }
+
+      @keyframes PlaneAnimation {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 100%;
+        }
+      }
+
+      .plane {
+        height: 20px;
+        animation: 5s linear 1s infinite running PlaneAnimation;
+        width: 30px;
+        background-image: url(images/plane.png);
+        transform: rotate(90deg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        transform: rotate(90deg);
+        position: absolute;
+        top: 10px;
+      }
+
+      #spain {
+        grid-area: spain;
+      }
+
+      #bali {
+        grid-area: bali;
+      }
+
+      #egypt {
+        grid-area: egypt;
+      }
+
+      #сzech {
+        grid-area: сzech;
+      }
+
+      #turkiye {
+        grid-area: turkiye;
+      }
+
+      #italy {
+        grid-area: italy;
+      }
+
+      #mainArticle {
+        display: grid;
+        grid-template-areas:
+          "spain bali bali"
+          "spain egypt сzech"
+          "spain turkiye italy";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+
+      #mainArticle div {
+        border: 1px solid;
+      }
+      header,
+      footer,
+      article,
+      nav {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gridContainer">
+      <header id="pageHeader">
+        <div class="plane"></div>
+        <p>Путешествуй с нами!</p>
+        <ul>
+          <li>Направления<i class="fa-solid fa-earth-americas"></i></li>
+          <li>Визы<i class="fa-brands fa-cc-visa"></i></li>
+          <li>Галерея<i class="fa-solid fa-image"></i></li>
+          <li>Цены<i class="fa-solid fa-wallet"></i></li>
+        </ul>
+      </header>
+      <article id="mainArticle">
+        <div id="spain">Испания</div>
+        <div id="bali">Бали</div>
+        <div id="egypt">Египет</div>
+        <div id="сzech">Чехия</div>
+        <div id="turkiye">Турция</div>
+        <div id="italy">Италия</div>
+      </article>
+      <footer id="pageFooter">Как нас найти</footer>
+    </div>
+  </body>
+</html>
