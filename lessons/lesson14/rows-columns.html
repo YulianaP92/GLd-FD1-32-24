@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .menu2 {
+        display: grid;
+        gap: 2vw;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+
+      .menu2 div {
+        border: 1px solid black;
+        padding: 20px;
+      }
+
+      coffee {
+        grid-column: 1;
+      }
+      .coffee2 {
+        grid-column: 2/3;
+        grid-row: 1;
+      }
+
+      .pastry {
+        grid-column: 1 / span 3;
+        grid-row: 2 / span 3;
+      }
+
+      .coffee3 {
+        grid-column: 1 / span 3;
+      }
+
+      .tea {
+        grid-column: 1;
+      }
+
+      .tea2 {
+        grid-column: 2;
+      }
+
+      /* .coffee {
+        grid-column: 1;
+      }
+      .coffee2 {
+        grid-column: 2/3;
+        grid-row: 1;
+      }
+      .coffee3 {
+        grid-column: 1 / span 3;
+        grid-row: 2;
+      }
+
+      .tea {
+        grid-column: 1;
+        grid-row: 3;
+      }
+
+      .tea2 {
+        grid-column: 2;
+        grid-row: 3;
+      } */
+
+      /* .pastry {
+        grid-column: 1 / span 3;
+        grid-row: 4;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <div class="menu2">
+      <div class="coffee">Капучино</div>
+      <div class="coffee2">Латте</div>
+      <div class="coffee3">Эспрессо</div>
+      <div class="tea">Зеленый чай</div>
+      <div class="tea2">Чёрный чай</div>
+      <div class="pastry">Круассан</div>
+      <!-- Добавляем ещё элементы меню -->
+    </div>
+  </body>
+</html>
