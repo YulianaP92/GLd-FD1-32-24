@@ -17,22 +17,21 @@
     <style>
       .gridContainer {
         display: grid;
-        /* grid-template-areas:
+        grid-template-areas:
           "header header header"
           "article article article"
-          "footer footer footer"; */
-        /* grid-template-rows: 60px 1fr 60px;
-        grid-template-columns: 20% 1fr 15%; */
+          "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 1fr 60px;
         grid-gap: 10px;
         height: 100vh;
         margin: 0;
+        border: 1px solid;
       }
 
       header {
-        background-color: rgb(126, 186, 239);
-        color: rgb(30, 48, 80);
         text-align: center;
-        height: 60px;
+        /* height: 60px; */
         padding-top: 10px;
         padding-bottom: 15px;
       }
@@ -46,7 +45,6 @@
       }
 
       header ul {
-        /* margin-right: 5px; */
         list-style-type: none;
         background-color: #ffffff;
         box-shadow: 0px 0px 6px 6px white;
@@ -55,18 +53,29 @@
 
       header ul li {
         display: inline;
-        margin: 10px;
-        padding: 10px;
-        /* margin-right: 5px; */
+        padding-left: 10px;
+        padding-right: 10px;
+        display: inline-block;
       }
 
       header ul li i {
         padding-left: 5px;
       }
 
+      footer {
+        grid-area: footer;
+      }
+      header {
+        grid-area: header;
+      }
+      article {
+        grid-area: article;
+      }
+
       header,
       footer {
-        border: 1px solid;
+        background-color: rgb(126, 186, 239);
+        color: rgb(30, 48, 80);
       }
 
       @keyframes PlaneAnimation {
@@ -80,7 +89,7 @@
 
       .plane {
         height: 20px;
-        animation: 5s linear 1s infinite running PlaneAnimation;
+        /* animation: 5s linear 1s infinite running PlaneAnimation; */
         width: 30px;
         background-image: url(images/plane.png);
         transform: rotate(90deg);
@@ -93,26 +102,32 @@
 
       #spain {
         grid-area: spain;
+        background-image: url(images/Spain.jpg);
       }
 
       #bali {
         grid-area: bali;
+        background-image: url(images/Bali.jpg);
       }
 
       #egypt {
         grid-area: egypt;
+        background-image: url(images/Egypt.jpg);
       }
 
       #сzech {
         grid-area: сzech;
+        background-image: url(images/Czech.jpg);
       }
 
       #turkiye {
         grid-area: turkiye;
+        background-image: url(images/Turkey.jpg);
       }
 
       #italy {
         grid-area: italy;
+        background-image: url(images/Italy.jpg);
       }
 
       #mainArticle {
@@ -123,12 +138,58 @@
           "spain turkiye italy";
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-gap: 10px;
+        grid-gap: 5px;
+        padding: 0px;
+        text-align: center;
+        line-height: 60px;
       }
 
       #mainArticle div {
-        border: 1px solid;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        opacity: 0.5;
       }
+
+      #mainArticle div:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+
+      .dropdown:hover {
+        transition: 5s;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+        transition: 5s;
+        /* transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1); */
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 100px;
+        max-height: 90px;
+        z-index: 1;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        text-align: left;
+        font-size: small;
+        padding-top: 10px;
+      }
+
+      .dropdown .dropdown-content a {
+        color: black;
+        padding: 4px 4px;
+        text-decoration: none;
+        display: block;
+      }
+
       header,
       footer,
       article,
@@ -143,7 +204,18 @@
         <div class="plane"></div>
         <p>Путешествуй с нами!</p>
         <ul>
-          <li>Направления<i class="fa-solid fa-earth-americas"></i></li>
+          <li class="dropdown">
+            Направления<i class="fa-solid fa-earth-americas"></i>
+            <div class="dropdown-content">
+              <a href="#">Италия</a>
+              <a href="#">Испания</a>
+              <a href="#">Турция</a>
+              <a href="#">Бали</a>
+              <a href="#">Египет</a>
+              <a href="#">Чехия</a>
+              <a href="#">Венгрия</a>
+            </div>
+          </li>
           <li>Визы<i class="fa-brands fa-cc-visa"></i></li>
           <li>Галерея<i class="fa-solid fa-image"></i></li>
           <li>Цены<i class="fa-solid fa-wallet"></i></li>
