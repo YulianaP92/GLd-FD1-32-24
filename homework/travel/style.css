@@ -1,0 +1,188 @@
+.gridContainer {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "article article article"
+    "footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 60px;
+  grid-gap: 10px;
+  height: 150vh;
+  margin: 0;
+  border: 1px solid;
+}
+
+header {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+header p {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  text-shadow: 1px 1px 2px white;
+  margin-top: 0;
+}
+
+header ul {
+  list-style-type: none;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 6px 6px white;
+  margin-top: 20px;
+}
+
+header ul li {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+}
+
+header ul li i {
+  padding-left: 5px;
+}
+
+footer {
+  grid-area: footer;
+}
+header {
+  grid-area: header;
+}
+article {
+  grid-area: article;
+}
+
+header,
+footer {
+  background-color: rgb(126, 186, 239);
+  color: rgb(30, 48, 80);
+}
+
+@keyframes PlaneAnimation {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.plane {
+  height: 20px;
+  animation: 10s linear 1s infinite running PlaneAnimation;
+  width: 30px;
+  background-image: url(images/plane.png);
+  transform: rotate(90deg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 10px;
+}
+
+#spain {
+  grid-area: spain;
+  background-image: url(images/Spain.jpg);
+}
+
+#bali {
+  grid-area: bali;
+  background-image: url(images/Bali.jpg);
+}
+
+#egypt {
+  grid-area: egypt;
+  background-image: url(images/Egypt.jpg);
+}
+
+#сzech {
+  grid-area: сzech;
+  background-image: url(images/Czech.jpg);
+}
+
+#turkiye {
+  grid-area: turkiye;
+  background-image: url(images/Turkey.jpg);
+}
+
+#italy {
+  grid-area: italy;
+  background-image: url(images/Italy.jpg);
+}
+
+#mainArticle {
+  display: grid;
+  grid-template-areas:
+    "spain bali bali"
+    "spain egypt сzech"
+    "spain turkiye italy";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  padding: 0px;
+  text-align: center;
+  line-height: 60px;
+}
+
+#mainArticle div {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+#mainArticle div:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.dropdown:hover {
+  transition: 5s;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  transition: 5s;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 100px;
+  max-height: 90px;
+  z-index: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: left;
+  font-size: small;
+  padding-top: 10px;
+}
+
+.dropdown .dropdown-content a {
+  color: black;
+  padding: 4px 4px;
+  text-decoration: none;
+  display: block;
+}
+
+footer {
+  text-align: center;
+}
+
+#mainArticle div:hover span {
+  visibility: hidden;
+}
+
+header,
+footer,
+article,
+nav {
+  padding: 20px;
+}
