@@ -138,12 +138,10 @@ footer {
   z-index: 1;
 }
 
-.dropdown:hover {
-  transition: 5s;
-}
 .dropdown:hover .dropdown-content {
-  display: block;
-  transition: 5s;
+  transition: height 3s;
+  height: 100px;
+  z-index: 10;
 }
 
 .dropdown {
@@ -152,12 +150,12 @@ footer {
 }
 
 .dropdown .dropdown-content {
-  display: none;
+  overflow: hidden;
+  z-index: -10;
   position: absolute;
   background-color: #ffffff;
   min-width: 100px;
-  max-height: 90px;
-  z-index: 1;
+  height: 0px;
   overflow-y: scroll;
   overflow-x: hidden;
   text-align: left;
