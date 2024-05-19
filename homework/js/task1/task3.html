@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <body></body>
+  <script>
+    var str = "Please enter number";
+    var number1 = prompt(`${str} 1: `);
+    var number2 = prompt(`${str} 2: `);
+
+    var isPositiveNumber1 = number1 >= 0;
+    var isPositiveNumber2 = number2 >= 0;
+
+    alert(
+      `Both numbers are positive - ${isPositiveNumber1 && isPositiveNumber2}`
+    );
+  </script>
+</html>

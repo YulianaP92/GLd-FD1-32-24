@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <body></body>
+  <script>
+    var str = "Please enter your salary";
+    var salary = prompt(str);
+
+    var incomeTax = (salary * 10) / 100;
+    var rent = 270;
+    var purchases = 80 * 5;
+
+    var consumption = rent + purchases;
+    var remainder = salary - consumption;
+
+    alert(
+      `User entered: ${salary} p \nRemainder: ${remainder} p \nConsumption: ${consumption} p`
+    );
+  </script>
+</html>
