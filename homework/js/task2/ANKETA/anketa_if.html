@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <body></body>
+  <script>
+    var firstName = prompt(`Please enter first name: `);
+    var lastName = prompt(`Please enter last name: `);
+    var middleName = prompt(`Please enter middle name: `);
+    var enteredAgeYears = prompt(`Please enter your age: `);
+
+    var ageYears = parseInt(enteredAgeYears);
+    if (ageYears <= 0) {
+      alert("Wrong age. Please start again");
+    }
+
+    var isMale = confirm("Is your gender male?");
+
+    var fullName = `${lastName} ${firstName} ${middleName}`;
+    var ageAsDays = ageYears * 360; //approx, excluding leap years
+
+    var retired;
+    if (ageYears >= 60) {
+      retired = "yes";
+    } else {
+      retired = "no";
+    }
+
+    var gender;
+    if (isMale) {
+      gender = "male";
+    } else {
+      gender = "female";
+    }
+
+    alert(
+      `Your Full name: ${fullName}\n` +
+        `Your age as years: ${ageYears}\n` +
+        `Your age as days: ${ageAsDays}\n` +
+        `In 5 years you will be: ${ageYears + 5}\n` +
+        `Your gender: ${gender}\n` +
+        `You are retired: ${retired}`
+    );
+  </script>
+</html>

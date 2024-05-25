@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <body></body>
+  <script>
+    var genre = prompt(
+      `Какой жанр книги предпочитаете? 1-Роман, 2-детектив или 3-фэнтези: `
+    );
+    var intGenre = parseInt(genre);
+    while (intGenre != 1 && intGenre != 2 && intGenre != 3) {
+      genre = prompt(
+        `Пожалуйста, введите жанр из перечисленного списка: 1-Роман, 2-детектив или 3-фэнтези: `
+      );
+      intGenre = parseInt(genre);
+    }
+
+    var isModern = confirm("Предпочитаете современную литературу?");
+    var isRussianAuthor = confirm("Хотели бы книгу русского автора?");
+
+    var falseMessage = "К сожалению, не смогли подобрать вам книгу";
+    var successMessage = "Предлагаем вам почитать";
+
+    if (isModern) {
+      if (isRussianAuthor) {
+        if (intGenre == 3) {
+          alert(`${successMessage} - 'Ночной дозор'`);
+        } else {
+          alert(falseMessage);
+        }
+      } else {
+        switch (intGenre) {
+          case 2:
+            alert(`${successMessage} - 'Девушка в поезде'`);
+            break;
+          case 3:
+            alert(`${successMessage} - 'Гарри Поттер'`);
+            break;
+          default:
+            alert(falseMessage);
+            break;
+        }
+      }
+    } else {
+      if (isRussianAuthor && intGenre === 1) {
+        alert(`${successMessage} - 'Война и мир'`);
+      } else if (!isRussianAuthor && intGenre === 2) {
+        alert(`${successMessage} - 'Шерлок Холмс'`);
+      } else {
+        alert(falseMessage);
+      }
+    }
+  </script>
+</html>

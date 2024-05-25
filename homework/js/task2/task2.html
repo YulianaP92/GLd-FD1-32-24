@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <body></body>
+  <script>
+    let day = 0;
+    while (day < 1 || day > 7) {
+      var enteredDay = prompt(`Введите день недели: `);
+      day = parseInt(enteredDay);
+    }
+
+    switch (day) {
+      case 1:
+        alert("Начало рабочей недели!");
+        break;
+      case 2:
+      case 3:
+      case 4:
+        alert("Обычный день");
+        break;
+      case 5:
+        alert("Конец рабочей недели!");
+        break;
+      case 6:
+      case 7:
+        alert("Выходной!");
+        break;
+      default:
+        alert("Уппс.. что-то пошло не так");
+        break;
+    }
+  </script>
+</html>
