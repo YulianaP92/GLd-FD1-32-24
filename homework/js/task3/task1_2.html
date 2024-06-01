@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <body></body>
+  <script>
+    function getWidthMatrix() {
+      var width = prompt(`Please enter matrix width: `);
+      if (isNaN(width)) {
+        return null;
+      }
+      return parseInt(width);
+    }
+
+    function getHeightMatrix() {
+      var height = prompt(`Please enter matrix height: `);
+      if (isNaN(height)) {
+        return null;
+      }
+      return parseInt(height);
+    }
+
+    function fillMatrix(width, height) {
+      let number = 1;
+      var matrix = [];
+      for (var i = 0; i < height; i++) {
+        matrix[i] = [];
+        for (var j = 0; j < width; j++) {
+          matrix[i][j] = number++;
+        }
+      }
+      return matrix;
+    }
+
+    let width = getWidthMatrix();
+    let height = getHeightMatrix();
+
+    if (isNaN(width) || isNaN(height)) {
+      console.log("Provided incorrect data");
+    } else {
+      let result = fillMatrix(width, height);
+
+      console.table(result);
+    }
+  </script>
+</html>

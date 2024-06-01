@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <body></body>
+  <script>
+    let array = [];
+    let ind = 1;
+
+    for (let index = 0; index < 10; index++) {
+      var str = "Please enter data";
+      var providedData = prompt(`${str} ${ind}: `);
+      ind++;
+      array[index] = providedData;
+    }
+
+    let arrayNumbers = [];
+    let indexNumberArray = 0;
+
+    for (let index = 0; index < array.length; index++) {
+      if (!isNaN(array[index])) {
+        var number = parseInt(array[index]);
+        arrayNumbers[indexNumberArray] = number;
+        indexNumberArray++;
+      }
+    }
+
+    let result = 0;
+    for (let index = 0; index < arrayNumbers.length; index++) {
+      result = result + arrayNumbers[index];
+    }
+
+    alert(`Result = ${result}`);
+  </script>
+</html>
