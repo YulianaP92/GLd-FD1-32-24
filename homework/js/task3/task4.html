@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <body></body>
+  <script>
+    const error = "Вы ввели некорректные данные";
+
+    function fillMatrix(width, height) {
+      let number = 1;
+      var matrix = [];
+      for (var i = 0; i < height; i++) {
+        matrix[i] = [];
+        for (var j = 0; j < width; j++) {
+          let providedNumber = prompt(`Введите значение ячейки ${i}-${j}: `);
+          if (isNaN(providedNumber)) {
+            alert(error);
+            break;
+          }
+          number = parseInt(providedNumber);
+          matrix[i][j] = number;
+        }
+      }
+      return matrix;
+    }
+
+    function displayMatrix(matrix) {
+      let result = "";
+      for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+          if (j == matrix[i].length - 1) {
+            result += `${matrix[i][j]}  \n`;
+          } else {
+            result += `${matrix[i][j]}  `;
+          }
+        }
+      }
+
+      alert(`Значения всей матрицы: \n${result}`);
+    }
+
+    function calculateSumFirstRowMatrix(matrix) {
+      let sum = 0;
+      for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+          if (i == 0) {
+            sum += matrix[i][j];
+          }
+        }
+      }
+
+      alert(`Сумма элементов в строке №1: ${sum}`);
+    }
+
+    function calculateSumSecondRowMatrix(matrix) {
+      let sum = 0;
+      for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+          if (i == 1) {
+            sum += matrix[i][j];
+          }
+        }
+      }
+
+      alert(`Сумма элементов в строке №2: ${sum}`);
+    }
+
+    let matrixHeight = prompt(`Введите кол-во строк матрицы: `);
+    let matrixWidth = prompt(`Введите кол-во столбцов матрицы: `);
+
+    if (isNaN(matrixHeight) || isNaN(matrixWidth)) {
+      alert(error);
+    } else {
+      let height = parseInt(matrixHeight);
+      let width = parseInt(matrixWidth);
+      let matrix = fillMatrix(width, height);
+      displayMatrix(matrix);
+      calculateSumFirstRowMatrix(matrix);
+      calculateSumSecondRowMatrix(matrix);
+    }
+  </script>
+</html>
