@@ -57,6 +57,27 @@
       alert(result);
     }
 
+    function calculateSumDiagonal(matrix) {
+      let mainSum = 0;
+      let secondarySum = 0;
+
+      for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix.length; j++) {
+          if (i === j) {
+            mainSum += matrix[i][j];
+          }
+          if (i + j === matrix.length - 1) {
+            secondarySum += matrix[i][j];
+          }
+        }
+      }
+
+      alert(
+        `Сумма главной диагонали: ${mainSum}\n` +
+          `Сумма побочной диагонали: ${secondarySum}\n`
+      );
+    }
+
     let matrixHeight = prompt(`Введите кол-во строк матрицы: `);
     let matrixWidth = prompt(`Введите кол-во столбцов матрицы: `);
 
@@ -68,6 +89,7 @@
       let matrix = fillMatrix(width, height);
       displayMatrix(matrix);
       calculateSumRowMatrix(matrix);
+      calculateSumDiagonal(matrix);
     }
   </script>
 </html>
