@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <body></body>
+  <script>
+    let goods = [
+      { name: "яблоко", price: 3.5, count: 10 },
+      { name: "апельсин", price: 6, count: 14 },
+      { name: "банан", price: 5.1, count: 2 },
+      { name: "мандарин", price: 5.9, count: 9 },
+      { name: "груша", price: 1.3, count: 5 },
+    ];
+
+    function displayAllGoods() {
+      let info = "";
+      var numberLesson;
+      for (let i = 0; i < goods.length; i++) {
+        info += `${goods[i].name}: ${goods[i].price} за кг\n`;
+      }
+      return info;
+    }
+
+    function findGoodsByName(name) {
+      let info = null;
+      for (let i = 0; i < goods.length; i++) {
+        if (goods[i].name == name) {
+          info = `Стоимость товара ${goods[i].name} - ${goods[i].price} за кг`;
+        }
+      }
+      return info;
+    }
+
+    function calculateGoodsBySum(sum) {
+      let info = "";
+      for (let i = 0; i < goods.length; i++) {
+        info += `${Math.round(sum / goods[i].price)} кг ${goods[i].name} ${
+          i < goods.length - 1 ? "или " : ""
+        }`;
+      }
+
+      alert(info);
+    }
+
+    alert(displayAllGoods());
+
+    let nameOfGoods = prompt(`Введите название товара для поиска: `);
+
+    let goodByName = findGoodsByName(nameOfGoods);
+
+    if (goodByName == null) {
+      alert(`Товар не найден`);
+    } else {
+      alert(goodByName);
+
+      let sum = prompt(`На какую сумму предпочитаете приобрести товары: `);
+      if (isNaN(sum)) {
+        alert("неверная сумма");
+      } else {
+        let providedSum = parseInt(sum);
+        calculateGoodsBySum(providedSum);
+      }
+    }
+  </script>
+</html>
