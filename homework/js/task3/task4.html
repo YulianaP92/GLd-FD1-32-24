@@ -42,30 +42,19 @@
       alert(`Значения всей матрицы: \n${result}`);
     }
 
-    function calculateSumFirstRowMatrix(matrix) {
-      let sum = 0;
+    function calculateSumRowMatrix(matrix) {
+      let result = "";
       for (let i = 0; i < matrix.length; i++) {
+        let sum = 0;
         for (let j = 0; j < matrix[i].length; j++) {
-          if (i == 0) {
-            sum += matrix[i][j];
+          sum += matrix[i][j];
+          if (j == matrix[i].length - 1) {
+            result += `Сумма элементов в строке ${i}: ${sum}\n`;
           }
         }
       }
 
-      alert(`Сумма элементов в строке №1: ${sum}`);
-    }
-
-    function calculateSumSecondRowMatrix(matrix) {
-      let sum = 0;
-      for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++) {
-          if (i == 1) {
-            sum += matrix[i][j];
-          }
-        }
-      }
-
-      alert(`Сумма элементов в строке №2: ${sum}`);
+      alert(result);
     }
 
     let matrixHeight = prompt(`Введите кол-во строк матрицы: `);
@@ -78,8 +67,7 @@
       let width = parseInt(matrixWidth);
       let matrix = fillMatrix(width, height);
       displayMatrix(matrix);
-      calculateSumFirstRowMatrix(matrix);
-      calculateSumSecondRowMatrix(matrix);
+      calculateSumRowMatrix(matrix);
     }
   </script>
 </html>
