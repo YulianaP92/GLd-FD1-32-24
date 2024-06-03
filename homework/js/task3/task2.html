@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+  </head>
+  <body></body>
+  <script>
+    function collectUserData() {
+      var name = prompt(`Please enter your name: `);
+      var providedLessons = prompt(`Please enter your number of lessons: `);
+
+      var countOfLessons = parseInt(providedLessons);
+
+      var lessons = [];
+
+      let count = 1;
+      for (let index = 0; index < countOfLessons; index++) {
+        var providedMark = prompt(
+          `Please enter mark for the lesson ${count}: `
+        );
+        var mark = parseInt(providedMark);
+
+        lessons[index] = { lesson: count, mark: mark };
+        count++;
+      }
+
+      var user = {
+        name: name,
+        lessons: lessons,
+        gpa: getGpa(lessons),
+      };
+
+      return user;
+    }
+
+    function getLessonsInfo(lessons) {
+      let info = "";
+      var numberLesson;
+      for (let i = 0; i < lessons.length; i++) {
+        info += `lesson ${lessons[i].lesson} = ${lessons[i].mark}\n`;
+      }
+      return info;
+    }
+
+    function getUserDetails(user) {
+      alert(`User name: ${user.name}\n` + getLessonsInfo(user.lessons));
+    }
+
+    function getGpa(lessons) {
+      let gpa = 0;
+      for (let i = 0; i < lessons.length; i++) {
+        gpa += lessons[i].mark;
+      }
+      return gpa;
+    }
+
+    function displayGpa(lessons) {
+      alert(getGpa(lessons));
+    }
+
+    function getAcademicPerformance(user) {
+      const necessaryMark = 7.5;
+
+      let gpa = user.gpa;
+
+      if (gpa < necessaryMark) {
+        alert(
+          `Not enough ${necessaryMark - gpa} points to go to the next course`
+        );
+      } else {
+        alert(`You are enrolled in the next course`);
+      }
+    }
+
+    var userData = collectUserData();
+  </script>
+
+  <input type="button" onclick="displayGpa(userData.lessons)" value="GPA" />
+  <input
+    type="button"
+    onclick="getUserDetails(userData)"
+    value="User data info"
+  />
+  <input
+    type="button"
+    onclick="getAcademicPerformance(userData)"
+    value="Information about moving to the next stage"
+  />
+</html>
