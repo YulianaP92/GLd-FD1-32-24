@@ -7,32 +7,48 @@
   </head>
   <body></body>
   <script>
-    let array = [];
-    let ind = 1;
+    function getProvidedArray() {
+      let array = [];
+      let ind = 1;
 
-    for (let index = 0; index < 10; index++) {
-      var str = "Please enter data";
-      var providedData = prompt(`${str} ${ind}: `);
-      ind++;
-      array[index] = providedData;
-    }
-
-    let arrayNumbers = [];
-    let indexNumberArray = 0;
-
-    for (let index = 0; index < array.length; index++) {
-      if (!isNaN(array[index])) {
-        var number = parseInt(array[index]);
-        arrayNumbers[indexNumberArray] = number;
-        indexNumberArray++;
+      for (let index = 0; index < 10; index++) {
+        var str = "Please enter data";
+        var providedData = prompt(`${str} ${ind}: `);
+        if (providedData === null || providedData === "") {
+          alert(`Data can not be emty`);
+          return null;
+        }
+        ind++;
+        array[index] = providedData;
       }
+
+      return array;
     }
 
-    let result = 0;
-    for (let index = 0; index < arrayNumbers.length; index++) {
-      result = result + arrayNumbers[index];
+    function calculateSum(array) {
+      let arrayNumbers = [];
+      let indexNumberArray = 0;
+
+      for (let index = 0; index < array.length; index++) {
+        if (!isNaN(array[index])) {
+          var number = parseInt(array[index]);
+          arrayNumbers[indexNumberArray] = number;
+          indexNumberArray++;
+        }
+      }
+
+      let result = 0;
+      for (let index = 0; index < arrayNumbers.length; index++) {
+        result = result + arrayNumbers[index];
+      }
+
+      return result;
     }
 
-    alert(`Result = ${result}`);
+    var data = getProvidedArray();
+    if (data !== null) {
+      let sum = calculateSum(data);
+      alert(`Result = ${sum}`);
+    }
   </script>
 </html>

@@ -49,11 +49,11 @@
     }
 
     function getGpa(lessons) {
-      let gpa = 0;
+      let sum = 0;
       for (let i = 0; i < lessons.length; i++) {
-        gpa += lessons[i].mark;
+        sum += lessons[i].mark;
       }
-      return gpa;
+      return sum / lessons.length;
     }
 
     function displayGpa(lessons) {

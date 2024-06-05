@@ -37,9 +37,12 @@
     function calculateGoodsBySum(sum) {
       let info = "";
       for (let i = 0; i < goods.length; i++) {
-        info += `${Math.round(sum / goods[i].price)} кг ${goods[i].name} ${
-          i < goods.length - 1 ? "или " : ""
-        }`;
+        let quantity = Math.round(sum / goods[i].price);
+        if (quantity <= goods[i].count) {
+          info += `${Math.round(sum / goods[i].price)} кг ${goods[i].name} ${
+            i < goods.length - 1 ? "или " : ""
+          }`;
+        }
       }
 
       alert(info);
