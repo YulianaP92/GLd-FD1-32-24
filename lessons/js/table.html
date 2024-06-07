@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      table {
+        border-color: blue;
+        border-collapse: collapse;
+      }
+      tr {
+        height: 2em;
+      }
+      td {
+        width: 150px;
+        text-align: center;
+      }
+    </style>
+    <table border="1">
+      <thead>
+        Shop list
+      </thead>
+      <tr>
+        <th>Artikel</th>
+        <th>Product name</th>
+        <th>Pries</th>
+        <th>Count</th>
+      </tr>
+    </table>
+  </body>
+  <script>
+    const shopList = {
+      "09360374": {
+        name: "Cardigan",
+        price: 49.9,
+        count: 0,
+      },
+      "02929990": {
+        name: "Coat",
+        price: 99.9,
+        count: 1,
+      },
+      "01827744": {
+        name: "Dressing gown",
+        price: 55.0,
+        count: 2,
+      },
+      18288828: {
+        name: "Dress",
+        price: 70.9,
+        count: 0,
+      },
+      "08093063": {
+        name: "Jacket",
+        price: 86.7,
+        count: 4,
+      },
+      "09282888": {
+        name: "Leggings",
+        price: 55.0,
+        count: 5,
+      },
+    };
+
+    let table = document.querySelector("table");
+
+    for (let key in shopList) {
+      let tr = document.createElement("tr");
+      var countN = shopList[key].count;
+      if (countN == 0) {
+        countN = "out of stock";
+      }
+      tr.innerHTML = `<td>${key}</td> <td>${shopList[key].name}</td> <td>${shopList[key].price} <td>${countN}</td>`;
+      table.appendChild(tr);
+    }
+  </script>
+</html>

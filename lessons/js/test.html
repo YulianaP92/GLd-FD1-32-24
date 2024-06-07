@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="parent">
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+    </div>
+    <button id="create-p" onclick="func()">Добавить элемент</button>
+    <script>
+      // function func() {
+      //   let parent = document.querySelector("#parent");
+
+      //   let p = document.createElement("p");
+      //   p.textContent = "444";
+
+      //   parent.appendChild(p);
+      // }
+
+      function func() {
+        let parent = document.querySelector("#parent");
+
+        let allCurrentP = document.getElementsByTagName("p");
+        let currentP = allCurrentP[allCurrentP.length - 1];
+        var contentP = currentP.textContent;
+        var number = parseInt(contentP);
+
+        let p = document.createElement("p");
+        var content = p.textContent;
+        p.textContent = ++number;
+        parent.appendChild(p);
+      }
+    </script>
+  </body>
+</html>
