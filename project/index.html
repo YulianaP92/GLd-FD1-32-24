@@ -753,7 +753,7 @@ Banner Style
       position: absolute;
       width: 40%;
       left: 30%;
-      bottom: 70px;
+      bottom: 100px;
       display: inline-block;
       /* opacity: 0.5; */
     }
@@ -960,27 +960,15 @@ Banner Style
     }
     #section-1
       .content-slider
-      #banner1:checked
+      #banner5:checked
       ~ nav
-      label:nth-of-type(1)
+      label:nth-of-type(5)
       .progressbar-fill,
     #section-1
       .content-slider
-      #banner2:checked
+      #banner6:checked
       ~ nav
-      label:nth-of-type(2)
-      .progressbar-fill,
-    #section-1
-      .content-slider
-      #banner3:checked
-      ~ nav
-      label:nth-of-type(3)
-      .progressbar-fill,
-    #section-1
-      .content-slider
-      #banner4:checked
-      ~ nav
-      label:nth-of-type(4)
+      label:nth-of-type(6)
       .progressbar-fill {
       animation: progressBarFill 5s linear;
     }
@@ -1005,9 +993,16 @@ Banner Style
       animation: progressBarFill 5s linear;
     }
 
-    /* .controls .progressbar .progressbar-fill {
+    #section-1
+      .content-slider
+      input:checked
+      .controls
+      label:nth-of-type(1)
+      .progressbar
+      .progressbar-fill {
       animation: progressBarFill 5s linear;
-    } */
+    }
+
     /* Animations */
     @keyframes progressBarFill {
       from {
@@ -1115,6 +1110,18 @@ Banner Style
             <input
               type="radio"
               id="banner4"
+              class="sec-1-input"
+              name="banner"
+            />
+            <input
+              type="radio"
+              id="banner5"
+              class="sec-1-input"
+              name="banner"
+            />
+            <input
+              type="radio"
+              id="banner6"
               class="sec-1-input"
               name="banner"
             />
@@ -1642,27 +1649,24 @@ Banner Style
       <footer id="pageFooter">Footer</footer>
     </div>
   </body>
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-  <!-- <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/wow.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script> -->
   <script>
     function bannerSwitcher() {
-      next = $(".sec-1-input").filter(":checked").next(".sec-1-input");
-      if (next.length) next.prop("checked", true);
-      else $(".sec-1-input").first().prop("checked", true);
+      let checkedValue = document.querySelector(".sec-1-input:checked");
+      let next = checkedValue?.nextElementSibling;
+
+      if (next != null) {
+        document.querySelector(".sec-1-input:checked").checked = false;
+        next.checked = true;
+      } else {
+        let first = document.querySelectorAll(".sec-1-input")[0];
+        first.checked = true;
+      }
     }
 
     var bannerTimer = setInterval(bannerSwitcher, 5000);
 
-    $("nav .controls label").click(function () {
+    let start = document.querySelector("nav .controls label");
+    start.click(function () {
       clearInterval(bannerTimer);
       bannerTimer = setInterval(bannerSwitcher, 5000);
     });
