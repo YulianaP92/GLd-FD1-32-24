@@ -753,7 +753,7 @@ Banner Style
       position: absolute;
       width: 40%;
       left: 30%;
-      bottom: 100px;
+      bottom: 50px;
       display: inline-block;
       /* opacity: 0.5; */
     }
@@ -1360,40 +1360,6 @@ Banner Style
                   </div>
                 </div>
               </div>
-              <nav>
-                <div class="controls">
-                  <label for="banner1"
-                    ><span class="progressbar"
-                      ><span class="progressbar-fill"></span></span
-                    ><span class="text">1</span></label
-                  >
-                  <label for="banner2"
-                    ><span class="progressbar"
-                      ><span class="progressbar-fill"></span></span
-                    ><span class="text">2</span></label
-                  >
-                  <label for="banner3"
-                    ><span class="progressbar"
-                      ><span class="progressbar-fill"></span></span
-                    ><span class="text">3</span></label
-                  >
-                  <label for="banner4"
-                    ><span class="progressbar"
-                      ><span class="progressbar-fill"></span></span
-                    ><span class="text">4</span></label
-                  >
-                  <label for="banner5"
-                    ><span class="progressbar"
-                      ><span class="progressbar-fill"></span></span
-                    ><span class="text">5</span></label
-                  >
-                  <label for="banner6"
-                    ><span class="progressbar"
-                      ><span class="progressbar-fill"></span></span
-                    ><span class="text">6</span></label
-                  >
-                </div>
-              </nav>
             </div>
           </div>
         </section>
@@ -1663,12 +1629,12 @@ Banner Style
       }
     }
 
-    var bannerTimer = setInterval(bannerSwitcher, 5000);
+    // var bannerTimer = setInterval(bannerSwitcher, 5000);
 
-    let start = document.querySelector("nav .controls label");
-    start.click(function () {
-      clearInterval(bannerTimer);
-      bannerTimer = setInterval(bannerSwitcher, 5000);
-    });
+    // let start = document.querySelector("nav .controls label");
+    // start.click(function () {
+    //   clearInterval(bannerTimer);
+    //   bannerTimer = setInterval(bannerSwitcher, 5000);
+    // });
   </script>
 </html>
