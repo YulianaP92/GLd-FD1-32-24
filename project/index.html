@@ -1077,9 +1077,10 @@ Footer Style
     }
 
     .call-to-action h2,
-    .call-to-action h4 {
+    .call-to-action p {
       text-align: center;
     }
+
     .call-to-action .border-button {
       text-align: center;
       margin-top: 30px;
@@ -1172,7 +1173,7 @@ Footer Style
 
     /* Set a style for the submit/login button */
     .form-container .btn {
-      background-color: #04aa6d;
+      background-color: #22b3c1;
       color: white;
       padding: 16px 20px;
       border: none;
@@ -1184,13 +1185,18 @@ Footer Style
 
     /* Add a red background color to the cancel button */
     .form-container .cancel {
-      background-color: red;
+      background-color: black;
     }
 
     /* Add some hover effects to buttons */
     .form-container .btn:hover,
     .open-button:hover {
       opacity: 1;
+    }
+
+    #sendForm p {
+      color: gray;
+      padding-top: 5px;
     }
   </style>
   <body>
@@ -1762,7 +1768,7 @@ Footer Style
                 </div>
               </div>
               <div class="form-popup" id="myForm">
-                <form action="/action_page.php" class="form-container">
+                <form action="" class="form-container">
                   <h3>Зваротны званок</h3>
                   <br />
                   <label for="name"><b>Ваша імя</b></label>
@@ -1776,11 +1782,28 @@ Footer Style
                     required
                   />
 
-                  <button type="submit" class="btn">Адправіць</button>
+                  <button type="button" class="btn" onclick="sendForm()">
+                    Адправіць
+                  </button>
                   <button
                     type="button"
                     class="btn cancel"
                     onclick="closeForm()"
+                  >
+                    Адхіліць
+                  </button>
+                </form>
+              </div>
+              <div class="form-popup" id="sendForm">
+                <form class="form-container">
+                  <p>
+                    Mы атрымалі ваша паведамленне. У бліжэйшы час нашы
+                    супрацоўнікі звяжуцца з вамі.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn cancel"
+                    onclick="closeSendForm()"
                   >
                     Адхіліць
                   </button>
@@ -1810,7 +1833,7 @@ Footer Style
       }
     }
 
-    var bannerTimer = setInterval(bannerSwitcher, 2000);
+    // var bannerTimer = setInterval(bannerSwitcher, 2000);
 
     function openForm() {
       document.getElementById("myForm").style.display = "block";
@@ -1818,6 +1841,15 @@ Footer Style
 
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
+    }
+
+    function closeSendForm() {
+      document.getElementById("sendForm").style.display = "none";
+    }
+
+    function sendForm() {
+      document.getElementById("myForm").style.display = "none";
+      document.getElementById("sendForm").style.display = "block";
     }
   </script>
 </html>
