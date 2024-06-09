@@ -1272,7 +1272,7 @@ Footer Style
                     ></a>
                   </li>
                 </ul>
-                <a class="menu-trigger">
+                <a class="menu-trigger" onclick="ExpandMenu()">
                   <span>Menu</span>
                 </a>
                 <!-- ***** Menu End ***** -->
@@ -1886,6 +1886,13 @@ Footer Style
     function sendForm() {
       document.getElementById("myForm").style.display = "none";
       document.getElementById("sendForm").style.display = "block";
+    }
+
+    function ExpandMenu() {
+      let ul = document.querySelector(
+        "body > div > header > div > div > div > nav > ul"
+      );
+      ul.style.display = "block";
     }
   </script>
 </html>
