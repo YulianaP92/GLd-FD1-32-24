@@ -141,14 +141,13 @@ reset
         "header header header"
         "article article article"
         "footer footer footer";
-      grid-template-rows: 90px 1fr 60px;
+      grid-template-rows: 90px 1fr 100px;
       grid-template-columns: 20% 1fr 15%;
       /* grid-gap: 10px; */
       height: 100vh;
       margin: 0;
     }
-    header,
-    footer {
+    header {
       padding: 20px;
     }
     #pageHeader {
@@ -920,14 +919,18 @@ Banner Style
     #section-1 .content-slider #banner1:checked ~ .slider #top-banner-1,
     #section-1 .content-slider #banner2:checked ~ .slider #top-banner-2,
     #section-1 .content-slider #banner3:checked ~ .slider #top-banner-3,
-    #section-1 .content-slider #banner4:checked ~ .slider #top-banner-4 {
+    #section-1 .content-slider #banner4:checked ~ .slider #top-banner-4,
+    #section-1 .content-slider #banner5:checked ~ .slider #top-banner-5,
+    #section-1 .content-slider #banner6:checked ~ .slider #top-banner-6 {
       opacity: 1;
       z-index: 1;
     }
     #section-1 .content-slider #banner1:checked ~ nav label:nth-of-type(1),
     #section-1 .content-slider #banner2:checked ~ nav label:nth-of-type(2),
     #section-1 .content-slider #banner3:checked ~ nav label:nth-of-type(3),
-    #section-1 .content-slider #banner4:checked ~ nav label:nth-of-type(4) {
+    #section-1 .content-slider #banner4:checked ~ nav label:nth-of-type(4),
+    #section-1 .content-slider #banner5:checked ~ nav label:nth-of-type(5),
+    #section-1 .content-slider #banner6:checked ~ nav label:nth-of-type(6) {
       cursor: default;
       color: #fff;
       transition: all 0.5s;
@@ -1044,6 +1047,76 @@ Banner Style
       transform: translate(0, -3px);
       box-shadow: 0 20px 40px 0 rgba(11, 99, 246, 1);
     }
+
+    /* 
+---------------------------------------------
+Footer Style
+--------------------------------------------- 
+*/
+
+    footer {
+      background-color: #22b3c1;
+      text-align: center;
+      /* padding: 25px 0px; */
+    }
+
+    footer p {
+      color: #fff;
+      padding-top: 55px;
+    }
+
+    footer p a {
+      color: #fff;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    footer p a:hover {
+      color: #fff;
+      opacity: 0.75;
+    }
+
+    .call-to-action h2,
+    .call-to-action h4 {
+      text-align: center;
+    }
+    .call-to-action .border-button {
+      text-align: center;
+      margin-top: 30px;
+    }
+    /* .call-to-action h2 {
+      font-size: 40px;
+      color: #fff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    } */
+
+    /* .call-to-action h4 {
+      font-size: 20px;
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    } */
+
+    .call-to-action .border-button {
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .call-to-action .border-button a {
+      color: #fff;
+      border-color: #fff;
+      box-shadow: 4px 6px 18px 15px rgba(0, 0, 0, 0.75);
+    }
+
+    .call-to-action .border-button a:hover {
+      background-color: #fff;
+      color: #22b3c1;
+    }
+
+    .nav .map-span{
+      padding-right: 10px;
+    }
   </style>
   <body>
     <div class="gridContainer">
@@ -1070,9 +1143,8 @@ Banner Style
                     /></a>
                   </li>
                   <li>
-                    <a href="reservation.html"
-                      >Карта<img src="images/map.png" class="map"
-                    /></a>
+                    <a href="https://yandex.by/maps/149/belarus/?ll=27.701393%2C52.858248&z=7"
+                      ><span class="map-span">Карта</span><i class="fa-solid fa-map-location-dot"></i></a>
                   </li>
                 </ul>
                 <a class="menu-trigger">
@@ -1222,7 +1294,7 @@ Banner Style
               <div id="top-banner-4" class="banner">
                 <div class="banner-inner-wrapper header-text">
                   <div class="main-caption">
-                    <h1>Брэст</h1>
+                    <h1>Mагілёў</h1>
                     <div class="border-button">
                       <a href="about.html">Падрабязней</a>
                     </div>
@@ -1235,13 +1307,13 @@ Banner Style
                             <div class="col-lg-6 col-sm-6 col-6">
                               <i class="fa-solid fa-calendar"></i>
                               <h4>
-                                <span>Год заснавання:</span><br />
-                                1019 г
+                                <span>Заснаванне:</span><br />
+                                1267 г.
                               </h4>
                             </div>
                             <div class="col-lg-6 col-sm-6 col-6">
                               <i class="fa-solid fa-earth-europe"></i>
-                              <h4><span>Тэрыторыя:</span><br />146.1 км²</h4>
+                              <h4><span>Тэрыторыя:</span><br />118,5 км²</h4>
                             </div>
                           </div>
                         </div>
@@ -1253,7 +1325,7 @@ Banner Style
               <div id="top-banner-5" class="banner">
                 <div class="banner-inner-wrapper header-text">
                   <div class="main-caption">
-                    <h1>Брэст</h1>
+                    <h1>Гродна</h1>
                     <div class="border-button">
                       <a href="about.html">Падрабязней</a>
                     </div>
@@ -1267,12 +1339,12 @@ Banner Style
                               <i class="fa-solid fa-calendar"></i>
                               <h4>
                                 <span>Год заснавання:</span><br />
-                                1019 г
+                                1128 г.
                               </h4>
                             </div>
                             <div class="col-lg-6 col-sm-6 col-6">
                               <i class="fa-solid fa-earth-europe"></i>
-                              <h4><span>Тэрыторыя:</span><br />146.1 км²</h4>
+                              <h4><span>Тэрыторыя:</span><br />142,1 км²</h4>
                             </div>
                           </div>
                         </div>
@@ -1284,7 +1356,7 @@ Banner Style
               <div id="top-banner-6" class="banner">
                 <div class="banner-inner-wrapper header-text">
                   <div class="main-caption">
-                    <h1>Брэст</h1>
+                    <h1>Віцебск</h1>
                     <div class="border-button">
                       <a href="about.html">Падрабязней</a>
                     </div>
@@ -1297,13 +1369,13 @@ Banner Style
                             <div class="col-lg-6 col-sm-6 col-6">
                               <i class="fa-solid fa-calendar"></i>
                               <h4>
-                                <span>Год заснавання:</span><br />
-                                1019 г
+                                <span>Заснаванне:</span><br />
+                                974 г.
                               </h4>
                             </div>
                             <div class="col-lg-6 col-sm-6 col-6">
                               <i class="fa-solid fa-earth-europe"></i>
-                              <h4><span>Тэрыторыя:</span><br />146.1 км²</h4>
+                              <h4><span>Тэрыторыя:</span><br />124,5 км²</h4>
                             </div>
                           </div>
                         </div>
@@ -1564,7 +1636,51 @@ Banner Style
           </div>
         </div>
       </article>
-      <footer id="pageFooter">Footer</footer>
+
+      <footer id="pageFooter">
+        <!-- <p>
+          Copyright © 2024
+          <a
+            href="https://be.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C"
+            >Вікіпедыя</a
+          >
+        </p> -->
+        <div class="call-to-action">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <p>
+                  Copyright © 2024
+                  <a
+                    href="https://be.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C"
+                    >Вікіпедыя</a
+                  >
+                </p>
+              </div>
+              <div class="col-lg-2">
+                <div class="border-button">
+                  <a href="https://belavia.by/"
+                    ><i class="fa-solid fa-plane"></i></i
+                  ></a>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="border-button">
+                  <a href="reservation.html"
+                    ><i class="fa-solid fa-ticket"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="border-button">
+                  <a href="reservation.html"
+                    ><i class="fa-solid fa-phone-volume"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
   <script>
@@ -1572,8 +1688,12 @@ Banner Style
       let checkedValue = document.querySelector(".sec-1-input:checked");
       let next = checkedValue?.nextElementSibling;
 
-      if (next != null) {
-        document.querySelector(".sec-1-input:checked").checked = false;
+      let isInput = next.classList.contains("sec-1-input");
+
+      if (isInput && next != null && next != undefined) {
+        let checkedValue = (document.querySelector(
+          ".sec-1-input:checked"
+        ).checked = false);
         next.checked = true;
       } else {
         let first = document.querySelectorAll(".sec-1-input")[0];
@@ -1581,12 +1701,6 @@ Banner Style
       }
     }
 
-    // var bannerTimer = setInterval(bannerSwitcher, 5000);
-
-    // let start = document.querySelector("nav .controls label");
-    // start.click(function () {
-    //   clearInterval(bannerTimer);
-    //   bannerTimer = setInterval(bannerSwitcher, 5000);
-    // });
+    var bannerTimer = setInterval(bannerSwitcher, 2000);
   </script>
 </html>
