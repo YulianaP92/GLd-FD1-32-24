@@ -141,7 +141,7 @@ reset
         "header header header"
         "article article article"
         "footer footer footer";
-      grid-template-rows: 90px 1fr 100px;
+      grid-template-rows: 90px 1fr auto;
       grid-template-columns: 20% 1fr 15%;
       /* grid-gap: 10px; */
       height: 100vh;
@@ -703,6 +703,26 @@ Visit Country Style
       }
     }
 
+    @media (max-width: 600px) {
+      .more-info {
+        visibility: hidden;
+      }
+    }
+
+    @media (max-width: 570px) {
+      .main-button a {
+        display: block;
+        margin-top: -30px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .call-to-action .container .row div:nth-of-type(2),
+      .call-to-action .container .row div:nth-of-type(4) {
+        visibility: hidden;
+      }
+    }
+
     /* 
 ---------------------------------------------
 Banner Style
@@ -1197,6 +1217,22 @@ Footer Style
     #sendForm p {
       color: gray;
       padding-top: 5px;
+    }
+
+    @media (max-width: 992px) {
+      .call-to-action .row .col-lg-6 {
+        visibility: hidden;
+        width: 0px !important;
+      }
+      #pageFooter {
+        margin-top: 150px;
+      }
+    }
+
+    @media (max-width: 915px) {
+      .call-to-action .row > * {
+        width: auto !important;
+      }
     }
   </style>
   <body>
