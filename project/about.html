@@ -50,27 +50,6 @@ reset
       outline: 0;
     }
 
-    .clearfix:after {
-      content: ".";
-      display: block;
-      clear: both;
-      visibility: hidden;
-      line-height: 0;
-      height: 0;
-    }
-
-    .clearfix {
-      display: inline-block;
-    }
-
-    html[xmlns] .clearfix {
-      display: block;
-    }
-
-    * html .clearfix {
-      height: 1%;
-    }
-
     ul,
     li {
       padding: 0;
@@ -143,7 +122,6 @@ reset
         "footer footer footer";
       grid-template-rows: 90px 1fr auto;
       grid-template-columns: 20% 1fr 15%;
-      /* grid-gap: 10px; */
       height: 100vh;
       margin: 0;
     }
@@ -181,24 +159,10 @@ Header Style
 --------------------------------------------- 
 */
 
-    .background-header {
-      background-color: #22b3c1 !important;
-      height: 70px !important;
-      position: fixed !important;
-      top: 0 !important;
-      left: 0;
-      right: 0;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15) !important;
-      /* -webkit-transition: all 0.5s ease 0s;
-      -moz-transition: all 0.5s ease 0s;
-      -o-transition: all 0.5s ease 0s; */
-      transition: all 0.5s ease 0s;
-    }
-
     .header-area {
       background-color: #22b3c1;
       position: absolute;
-      height: 100%;
+      /* height: 100%; */
       top: 0;
       left: 0;
       right: 0;
@@ -215,7 +179,7 @@ Header Style
       padding: 0px 30px;
     }
 
-    .background-header .main-nav {
+    .main-nav {
       padding: 0px;
       background-color: transparent;
     }
@@ -281,34 +245,12 @@ Header Style
     }
 
     .header-area .main-nav .nav li.has-sub ul.sub-menu li:last-child a:hover,
-    .background-header
-      .main-nav
-      .nav
-      li.has-sub
-      ul.sub-menu
-      li:last-child
-      a:hover {
+    .main-nav .nav li.has-sub ul.sub-menu li:last-child a:hover {
       padding-left: 25px !important;
     }
 
     .header-area .main-nav .nav li:hover a {
       opacity: 0.8;
-    }
-    /* 
-    .header-area .main-nav .nav li a.active::after {
-      width: 20px;
-      height: 2px;
-      background-color: #fff;
-      position: absolute;
-      content: "";
-      left: 15px;
-      top: 2px;
-    } */
-
-    .background-header .main-nav .nav li:hover a,
-    .background-header .main-nav .nav li a.active {
-      color: #fff;
-      opacity: 1;
     }
 
     .header-area .main-nav .nav li.has-sub {
@@ -368,11 +310,11 @@ Header Style
       left: 0;
       width: 75%;
     }
-
+    /* 
     .background-header .main-nav .menu-trigger span:before,
     .background-header .main-nav .menu-trigger span:after {
       background-color: #fff;
-    }
+    } */
 
     .header-area .main-nav .menu-trigger span:before,
     .header-area .main-nav .menu-trigger span:after {
@@ -415,9 +357,9 @@ Header Style
       background-color: #fff;
     }
 
-    .background-header .main-nav .menu-trigger.active span:before {
+    /* .background-header .main-nav .menu-trigger.active span:before {
       background-color: #fff;
-    }
+    } */
 
     .header-area .main-nav .menu-trigger.active span:after {
       /* -moz-transform: translateY(-6px) translateX(1px) rotate(-45deg);
@@ -427,9 +369,9 @@ Header Style
       background-color: #fff;
     }
 
-    .background-header .main-nav .menu-trigger.active span:after {
+    /* .background-header .main-nav .menu-trigger.active span:after {
       background-color: #fff;
-    }
+    } */
 
     .header-area.header-sticky {
       min-height: 80px;
@@ -439,6 +381,15 @@ Header Style
       color: #fff;
     }
 
+    @media (max-width: 770px) {
+      .call-to-action .container p {
+        visibility: hidden;
+      }
+      .call-to-action .container {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
     /* @media (max-width: 1200px) {
       .header-area .main-nav .nav li {
         padding-left: 10px;
@@ -480,6 +431,19 @@ Visit Country Style
 
     .visit-country .item .image img {
       border-radius: 23px;
+      width: 500px;
+      float: left;
+    }
+
+    .image {
+      width: 500px;
+      float: left;
+      padding-right: 20px;
+    }
+
+    p {
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
 
     .visit-country .item .right-content h4 {
@@ -593,12 +557,12 @@ Visit Country Style
         left: 30px;
         top: 15px;
       }
-      .background-header .main-nav .logo {
+      /* .background-header .main-nav .logo {
         top: 0px;
-      }
-      .background-header .main-nav .border-button {
+      } */
+      /* .background-header .main-nav .border-button {
         top: 0px !important;
-      }
+      } */
       .header-area .main-nav .border-button {
         position: absolute;
         top: 15px;
@@ -615,7 +579,7 @@ Visit Country Style
       .header-area {
         background-color: #22b3c1;
         padding: 0px 15px;
-        height: 100px;
+        /* height: 100px; */
         box-shadow: none;
         text-align: center;
       }
@@ -644,9 +608,9 @@ Visit Country Style
       .header-area.header-sticky .nav {
         margin-top: 85px !important;
       }
-      .background-header.header-sticky .nav {
+      /* .background-header.header-sticky .nav {
         margin-top: 70px !important;
-      }
+      } */
       .header-area .main-nav .nav li:first-child {
         border-top: 1px solid #eee;
       }
@@ -717,9 +681,15 @@ Visit Country Style
     }
 
     @media (max-width: 360px) {
-      .call-to-action .container .row div:nth-of-type(2),
-      .call-to-action .container .row div:nth-of-type(4) {
+      .call-to-action .container div:nth-of-type(2),
+      .call-to-action .container div:nth-of-type(4) {
         visibility: hidden;
+      }
+    }
+
+    @media (max-width: 990px) {
+      .button-group .border-button {
+        padding-right: 20px !important;
       }
     }
 
@@ -764,7 +734,7 @@ Banner Style
       background-position: 50% 50%;
       transition: all 0.5s ease;
     }
-    #section-1 .more-info {
+    .more-info {
       margin-top: 60px;
       background-color: #fff;
       padding: 20px 30px;
@@ -776,7 +746,7 @@ Banner Style
       display: inline-block;
       /* opacity: 0.5; */
     }
-    #section-1 .more-info i {
+    .more-info i {
       color: #22b3c1;
       font-size: 24px;
       width: 60px;
@@ -1219,7 +1189,7 @@ Footer Style
       padding-top: 5px;
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 993px) {
       .call-to-action .row .col-lg-6 {
         visibility: hidden;
         width: 0px !important;
@@ -1233,6 +1203,41 @@ Footer Style
       .call-to-action .row > * {
         width: auto !important;
       }
+    }
+
+    ul.info {
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      padding: 15px 0px;
+    }
+
+    ul.info li {
+      display: inline-block;
+      width: 32%;
+      color: #afafaf;
+      font-size: 14px;
+    }
+
+    #mainArticle {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .fa {
+      padding-right: 10px;
+    }
+
+    .button-group {
+      float: right;
+    }
+
+    .call-to-action p {
+      float: left;
+    }
+
+    .button-group .border-button {
+      float: left;
+      padding-right: 100px;
     }
   </style>
   <body>
@@ -1283,483 +1288,106 @@ Footer Style
       </header>
       <!-- ***** Header End***** -->
       <article id="mainArticle">
-        <section id="section-1">
-          <div class="content-slider">
-            <input
-              type="radio"
-              id="banner1"
-              class="sec-1-input"
-              name="banner"
-              checked
-            />
-            <input
-              type="radio"
-              id="banner2"
-              class="sec-1-input"
-              name="banner"
-            />
-            <input
-              type="radio"
-              id="banner3"
-              class="sec-1-input"
-              name="banner"
-            />
-            <input
-              type="radio"
-              id="banner4"
-              class="sec-1-input"
-              name="banner"
-            />
-            <input
-              type="radio"
-              id="banner5"
-              class="sec-1-input"
-              name="banner"
-            />
-            <input
-              type="radio"
-              id="banner6"
-              class="sec-1-input"
-              name="banner"
-            />
-            <div class="slider">
-              <div id="top-banner-1" class="banner">
-                <div class="banner-inner-wrapper header-text">
-                  <div class="main-caption">
-                    <h1>Брэст</h1>
-                    <div class="border-button">
-                      <a href="about.html">Падрабязней</a>
-                    </div>
-                  </div>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="more-info">
-                          <div class="row">
-                            <div class="col-lg-6 col-sm-6 col-6">
-                              <i class="fa-solid fa-calendar"></i>
-                              <h4>
-                                <span>Год заснавання:</span><br />
-                                1019 г
-                              </h4>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-6">
-                              <i class="fa-solid fa-earth-europe"></i>
-                              <h4><span>Тэрыторыя:</span><br />146.1 км²</h4>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="top-banner-2" class="banner">
-                <div class="banner-inner-wrapper header-text">
-                  <div class="main-caption">
-                    <h1>Mінск</h1>
-                    <div class="border-button">
-                      <a href="about.html">Падрабязней</a>
-                    </div>
-                  </div>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="more-info">
-                          <div class="row">
-                            <div class="col-lg-6 col-sm-6 col-6">
-                              <i class="fa-solid fa-calendar"></i>
-                              <h4>
-                                <span>Заснаванне:</span><br />
-                                1067 г.
-                              </h4>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-6">
-                              <i class="fa-solid fa-earth-europe"></i>
-                              <h4><span>Тэрыторыя:</span><br />348,8 км²</h4>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="top-banner-3" class="banner">
-                <div class="banner-inner-wrapper header-text">
-                  <div class="main-caption">
-                    <h1>Гомель</h1>
-                    <div class="border-button">
-                      <a href="about.html">Падрабязней</a>
-                    </div>
-                  </div>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="more-info">
-                          <div class="row">
-                            <div class="col-lg-6 col-sm-6 col-6">
-                              <i class="fa-solid fa-calendar"></i>
-                              <h4>
-                                <span>Заснаванне:</span><br />
-                                1142 г.
-                              </h4>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-6">
-                              <i class="fa-solid fa-earth-europe"></i>
-                              <h4><span>Тэрыторыя:</span><br />139,77 км²</h4>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="top-banner-4" class="banner">
-                <div class="banner-inner-wrapper header-text">
-                  <div class="main-caption">
-                    <h1>Mагілёў</h1>
-                    <div class="border-button">
-                      <a href="about.html">Падрабязней</a>
-                    </div>
-                  </div>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="more-info">
-                          <div class="row">
-                            <div class="col-lg-6 col-sm-6 col-6">
-                              <i class="fa-solid fa-calendar"></i>
-                              <h4>
-                                <span>Заснаванне:</span><br />
-                                1267 г.
-                              </h4>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-6">
-                              <i class="fa-solid fa-earth-europe"></i>
-                              <h4><span>Тэрыторыя:</span><br />118,5 км²</h4>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="top-banner-5" class="banner">
-                <div class="banner-inner-wrapper header-text">
-                  <div class="main-caption">
-                    <h1>Гродна</h1>
-                    <div class="border-button">
-                      <a href="about.html">Падрабязней</a>
-                    </div>
-                  </div>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="more-info">
-                          <div class="row">
-                            <div class="col-lg-6 col-sm-6 col-6">
-                              <i class="fa-solid fa-calendar"></i>
-                              <h4>
-                                <span>Год заснавання:</span><br />
-                                1128 г.
-                              </h4>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-6">
-                              <i class="fa-solid fa-earth-europe"></i>
-                              <h4><span>Тэрыторыя:</span><br />142,1 км²</h4>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="top-banner-6" class="banner">
-                <div class="banner-inner-wrapper header-text">
-                  <div class="main-caption">
-                    <h1>Віцебск</h1>
-                    <div class="border-button">
-                      <a href="about.html">Падрабязней</a>
-                    </div>
-                  </div>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="more-info">
-                          <div class="row">
-                            <div class="col-lg-6 col-sm-6 col-6">
-                              <i class="fa-solid fa-calendar"></i>
-                              <h4>
-                                <span>Заснаванне:</span><br />
-                                974 г.
-                              </h4>
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-6">
-                              <i class="fa-solid fa-earth-europe"></i>
-                              <h4><span>Тэрыторыя:</span><br />124,5 км²</h4>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div class="visit-country">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="section-heading">
-                  <h2>Hаведай любы горад Беларусі</h2>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="items">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-5">
-                            <div class="image">
-                              <img src="images/Brest_261.jpg" alt="" />
-                            </div>
-                          </div>
-                          <div class="col-lg-8 col-sm-7">
-                            <div class="right-content">
-                              <h4>Брэст</h4>
-                              <div class="main-button">
-                                <a href="about.html">Чытаць больш</a>
-                              </div>
-                              <p>
-                                Горад належыць да ліку найстаражытных славянскіх
-                                паселішчаў. Упершыню згадваецца ў Наўгародскім
-                                першым (сінадальным) летапісе пад 1017 г.Брэст —
-                                пяты горад на тэрыторыі цяперашняй Беларусі,
-                                раней згаданыя толькі Полацк, Віцебск, Тураў і
-                                Ваўкавыск. З 04.12.1939 цэнтр Брэсцкай вобласці
-                                БССР (з 1991 Рэспублікі Беларусь).
-                              </p>
-                              <ul class="info">
-                                <li>
-                                  <i class="fa fa-user"></i> 344 470 чалавек
-                                </li>
-                                <li><i class="fa fa-globe"></i>146,12 км²</li>
-                                <li>
-                                  <i class="fa fa-users"></i>2343.7 чел./км²
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-5">
-                            <div class="image">
-                              <img src="images/minsk_more_3.jpg" alt="" />
-                            </div>
-                          </div>
-                          <div class="col-lg-8 col-sm-7">
-                            <div class="right-content">
-                              <h4>Mінск</h4>
-                              <div class="main-button">
-                                <a href="about.html">Чытаць больш</a>
-                              </div>
-                              <p>
-                                Сталіца і найбуйнейшы горад Беларусі,
-                                адміністрацыйны цэнтр Мінскай вобласці і
-                                Мінскага раёна, у склад якіх не ўваходзіць,
-                                паколькі з'яўляецца самастойнай
-                                адміністрацыйна-тэрытарыяльнай адзінкай з
-                                асаблівым (сталічным) статусам. Найбуйнейшы
-                                транспартны вузел, палітычны, эканамічны,
-                                культурны і навуковы цэнтр краіны
-                              </p>
-                              <ul class="info">
-                                <li>
-                                  <i class="fa fa-user"></i> 1,975 мільёна
-                                </li>
-                                <li><i class="fa fa-globe"></i>348,8 км²</li>
-                                <li>
-                                  <i class="fa fa-users"></i>5720 чел./км²
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-5">
-                            <div class="image">
-                              <img src="images/gomel_more.jpg" alt="" />
-                            </div>
-                          </div>
-                          <div class="col-lg-8 col-sm-7">
-                            <div class="right-content">
-                              <h4>Гомель</h4>
-                              <div class="main-button">
-                                <a href="about.html">Чытаць больш</a>
-                              </div>
-                              <p>
-                                Другі па колькасці насельніцтва горад у краіне.
-                                Горад упершыню згадваецца ў летапісах 1142 г. і
-                                мае багатую гісторыю. У Гомелі знаходзяцца такія
-                                знакамітыя беларускія ўніверсітэты, як Беларускі
-                                дзяржаўны ўніверсітэт транспарту, Гомельскі
-                                дзяржаўны ўніверсітэт імя Францыска Скарыны.
-                              </p>
-                              <ul class="info">
-                                <li>
-                                  <i class="fa fa-user"></i>526 872 чалавек
-                                </li>
-                                <li><i class="fa fa-globe"></i>139,8 км²</li>
-                                <li>
-                                  <i class="fa fa-users"></i>3606 чел./км²
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-5">
-                            <div class="image">
-                              <img src="images/mogilev_more.jpg" alt="" />
-                            </div>
-                          </div>
-                          <div class="col-lg-8 col-sm-7">
-                            <div class="right-content">
-                              <h4>Mагілёў</h4>
-                              <div class="main-button">
-                                <a href="about.html">Чытаць больш</a>
-                              </div>
-                              <p>
-                                Аб паходжанні назвы горада дакладных звестак
-                                няма, маюцца толькі здагадкі. Некаторыя
-                                даследчыкі звязваюць паходжанне назвы горада з
-                                імем полацкага князя Льва Уладзіміравіча, або
-                                Льва Магутнага. Існуе таксама версія аб
-                                паходжанні назвы горада ад фіна-вугорскага
-                                "магіляй" - "горы над вадой"
-                              </p>
-                              <ul class="info">
-                                <li>
-                                  <i class="fa fa-user"></i>380 440 чалавек
-                                </li>
-                                <li><i class="fa fa-globe"></i>118,5 км²</li>
-                                <li>
-                                  <i class="fa fa-users"></i>2980 чел./км²
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-5">
-                            <div class="image">
-                              <img src="images/grodno_more.jpg" alt="" />
-                            </div>
-                          </div>
-                          <div class="col-lg-8 col-sm-7">
-                            <div class="right-content">
-                              <h4>Гродна</h4>
-                              <div class="main-button">
-                                <a href="about.html">Чытаць больш</a>
-                              </div>
-                              <p>
-                                Гродна - адзін з самых старых гарадоў Беларусі.
-                                Ён упершыню згадваецца ў старажытнарускіх
-                                крыніцах у 1005 годзе. Але гэтыя звесткі
-                                патрабуюць крытычнага падыходу: спасылкі ідуць
-                                на Кіева-Пячэрскі патэрык, які з вялікай доляй
-                                нацяжкі можна лічыць першакрыніцай. Афіцыйнай
-                                датай заснавання горада з'яўляецца 1128 год. У
-                                сярэдзіне XIII ст. Гродна ўвайшоў у склад
-                                Вялікага княства Літоўскага (з 1569 года -
-                                частка Рэчы Паспалітай).
-                              </p>
-                              <ul class="info">
-                                <li>
-                                  <i class="fa fa-user"></i>368 710 чалавек
-                                </li>
-                                <li><i class="fa fa-globe"></i>142,11 км²</li>
-                                <li>
-                                  <i class="fa fa-users"></i>2515 чел./км²
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="item">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-5">
-                            <div class="image">
-                              <img src="images/vitebsk_more.jpg" alt="" />
-                            </div>
-                          </div>
-                          <div class="col-lg-8 col-sm-7">
-                            <div class="right-content">
-                              <h4>Віцебск</h4>
-                              <div class="main-button">
-                                <a href="about.html">Чытаць больш</a>
-                              </div>
-                              <p>
-                                Другі па ўзросце горад Беларусі (974 год) пасля
-                                Полацка. Узнік на высокіх берагах Заходняй
-                                Дзвіны і Віцьбы, якая дала яму імя, на шляху з
-                                варагаў у грэкі. Па гарадской легендзе XVIII
-                                стагоддзя, заснаваны княгіняй Вольгай. Горад
-                                фармаваўся як адзін з цэнтраў аб'яднання
-                                славян-крывічаў, а зручнае геаграфічнае
-                                становішча на скрыжаванні найважнейшых гандлёвых
-                                шляхоў спрыяла росту і росквіту яго на працягу
-                                наступных стагоддзяў.
-                              </p>
-                              <ul class="info">
-                                <li>
-                                  <i class="fa fa-user"></i>358 395 чалавек
-                                </li>
-                                <li><i class="fa fa-globe"></i>124,5 км²</li>
-                                <li>
-                                  <i class="fa fa-users"></i>2678 чел./км²
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <!-- <div class="visit-country">
+          <div class="container"> -->
+        <div>
+          <div class="image">
+            <img src="images/Brest_261.jpg" alt="" />
           </div>
         </div>
+        <div>
+          <div class="right-content">
+            <h3>Брэст</h3>
+            <p>
+              Горад належыць да ліку найстаражытных славянскіх паселішчаў.
+              Упершыню згадваецца ў Наўгародскім першым (сінадальным) летапісе
+              пад 1017 г.Брэст — пяты горад на тэрыторыі цяперашняй Беларусі,
+              раней згаданыя толькі Полацк, Віцебск, Тураў і Ваўкавыск. З
+              04.12.1939 цэнтр Брэсцкай вобласці БССР (з 1991 Рэспублікі
+              Беларусь).
+            </p>
+            <h4>Гісторыя</h4>
+            <p>
+              Археалагічныя даследаванні горада паказалі, што як пагранічная
+              крэпасць і апорны пункт славянскай каланізацыі горад быў заснаваны
+              ў канцы Χ стагоддзя. Агульнае аблічча матэрыяльнай культуры
+              старажытнага Берасця пацвярджае яго заснаванне адным з
+              усходне-славянскіх плямён — дрыгавічамі. Адносна дакладнасці дат
+              першага ўспаміну думкі гісторыкаў разыходзяцца. Дакладна вядома,
+              што звязана першае ўпамінанне з падзеямі 1015—1019, калі кіеўскі
+              князь Святаполк Уладзіміравіч вёў барацьбу за кіеўскі сталец са
+              сваім братам наўгародскім князем Яраславам Уладзіміравічам.
+              Упершыню ўпамінаецца пад 1019 годам[24]. Такога пункту гледжання
+              прытрымліваецца Пётр Лысенка, абапіраючыся на «Аповесць мінулых
+              гадоў» і складзеныя на яе аснове пазнейшыя зборы, дзе пра паход
+              1017 года ў Пабужжа нічога не сказана. Другая група даследчыкаў —
+              М. Карамзін, С. Салаўёў, Г. Лаўмянскі, Г. Штыхаў і інш. давяраюць
+              сказанаму ў першым спісе Наўгародскага летапісу: " в лето 6525
+              (1017) Ярослав иде к Берестью ". Старажытнае Берасце, размешчанае
+              на сутоку рэк, кантралявала водныя шляхі па Мухаўцу з усходу, ад
+              дняпроўскага вялікага воднага шляху «з варагаў у грэкі» да Буга і
+              па Бугу — шлях з поўдня, з Валыні — да Балтыйскага мора. З самага
+              пачатку існавання Берасце адыгрывала ролю палітычнага,
+              эканамічнага, адміністрацыйнага і культурнага цэнтра Пабужжа.
+              Горад быў гандлёвым цэнтрам Старажытнарускай дзяржавы на мяжы з
+              польскімі і літоўскім ўладаннямі. З прычыны прыгранічнага
+              размяшчэння часта быў у цэнтры ваенных падзей. У 1020 годзе
+              Берасцем авалодаў польскі князь Баляслаў Храбры. У 1022, 1031 і
+              1044 гадах кіеўскі князь Яраслаў Уладзіміравіч здзейсніў паходы да
+              Берасця, які, як можна меркаваць, быў заняты палякамі. Наступны
+              ўспамін Бярэсця ў летапісе звязана з барацьбой Ізяслава Яраславіча
+              з яго братамі Святаполкам і Усеваладам за кіеўскі сталец[28].
+            </p>
+            <div>
+              <div class="image" style="float: right">
+                <img src="images/brest-history.jpg" alt="" />
+              </div>
+            </div>
+            <p>
+              У «Павучанні» Уладзіміра Манамаха гаворыцца, што ў 1070-я гады
+              яго, па даручэнні праціўнікаў Ізяслава, пасылалі пільнаваць
+              Берасце, спалены палякамі. Пётр Лысенка лічыць, што гэта адбылося
+              ў 1073 годзе, пасля таго як кіеўскі князь Ізяслаў Яраславіч быў
+              выгнаны з Кіева і ўцёк да польскага караля Баляслава II Смелага. У
+              1097 годзе вялікі князь кіеўскі Святаполк Ізяславіч выгнаў з
+              Берасця валынскага князя Давыда Ігаравіча. У гэтых паведамленнях
+              Берасце названы горадам, што азначае існаванне там абарончых
+              збудаванняў. Дзяцінец (трохвугольнай у плане формы, умацаваны з
+              боку поля ровам, замляным валам і частаколам), найбольш умацаваная
+              старажытная частка Берасця, размяшчалася на мысе, утвораным правым
+              берагам ракі Заходні Буг і левым берагам левага рукава р. Мухавец.
+              Вакольны горад месціўся супраць дзядзінца, на востраве, утвораным
+              2 рукавамі р. Мухавец у месцы ўпадзення яе ў Заходні Буг. Тут
+              выяўлена неўмацаванае паселішча, якое датуецца матэрыяламі X
+              стагоддзя. На дзяцінцы раскапаны вуліцы з драўляным насцілам,
+              рэшткі больш як 200 жылых і гаспадарчых пабудоў. Знойдзены
+              сведчанні развіцця тут рамёстваў, гандлевых і культурных сувязей з
+              гарадамі старажытнай Русі і суседнімі краінамі[27]. Меркаваны
+              выгляд Берасця ў XII—XIII стагоддзях У 1146 годзе горад у складзе
+              Тураўскага княства. З другой паловы XII стагоддзя Берасце
+              уваходзіла ў склад Уладзіміра-Валынскага княства. З 1199 года ў
+              складзе Галіцка-Валынскага княства. У XII стагоддзі на месцы
+              дзядзінца пабудаваны драўляны замак (адноўлены ў другой палове
+              XIII стагоддзя). На працягу XII—XIII стагоддзяў летапісы
+              неаднаразова адзначалі спробы Берасця стаць цэнтрам самастойнага
+              княства. Падчас мангола-татарскага нашэсця паблізу Берасця
+              адбылася жорсткая бітва, але горад, відаць, не быў захоплены. З
+              1272 года Берасцем валодаў валынскі князь Уладзімір Васількавіч, а
+              з 1289 года — Мсціслаў Данілавіч. У 1276—1288 гадах на тэрыторыі
+              замка валынскім князем Уладзімірам Васількавічам была ўзведзена
+              мураваная вежа-данжон (лёс яе невядомы, малаверагодна што знесена
+              пры пабудове Брэсцкай крэпасці). У XIII стагоддзі сінхронна з
+              вежай у горадзе была змуравана царква Св. Пятра.
+            </p>
+            <ul class="info">
+              <li><i class="fa fa-user"></i> 344 470 чалавек</li>
+              <li><i class="fa fa-globe"></i>146,12 км²</li>
+              <li><i class="fa fa-users"></i>2343.7 чел./км²</li>
+            </ul>
+          </div>
+        </div>
+        <!-- </div>
+        </div> -->
       </article>
 
       <footer id="pageFooter">
@@ -1772,80 +1400,69 @@ Footer Style
         </p> -->
         <div class="call-to-action">
           <div class="container">
-            <div class="row">
-              <div class="col-lg-6">
-                <p>
-                  Copyright © 2024
-                  <a
-                    href="https://be.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C"
-                    >Вікіпедыя</a
-                  >
-                </p>
+            <p>
+              Copyright © 2024
+              <a
+                href="https://be.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C"
+                >Вікіпедыя</a
+              >
+            </p>
+            <div class="button-group">
+              <div class="border-button">
+                <a href="https://belavia.by/"
+                  ><i class="fa-solid fa-plane"></i
+                ></a>
               </div>
-              <div class="col-lg-2">
-                <div class="border-button">
-                  <a href="https://belavia.by/"
-                    ><i class="fa-solid fa-plane"></i
-                  ></a>
-                </div>
+              <div class="border-button">
+                <a href="reservation.html"
+                  ><i class="fa-solid fa-ticket"></i
+                ></a>
               </div>
-              <div class="col-lg-2">
-                <div class="border-button">
-                  <a href="reservation.html"
-                    ><i class="fa-solid fa-ticket"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-2">
-                <div class="border-button">
-                  <a onclick="openForm()"
-                    ><i class="fa-solid fa-phone-volume"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="form-popup" id="myForm">
-                <form action="" class="form-container">
-                  <h3>Зваротны званок</h3>
-                  <br />
-                  <label for="name"><b>Ваша імя</b></label>
-                  <input type="text" placeholder="Iмя" required />
-                  <label for="phone"><b>Ваш нумар тэлефона</b></label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="Hумар тэлефона"
-                    required
-                  />
-
-                  <button type="button" class="btn" onclick="sendForm()">
-                    Адправіць
-                  </button>
-                  <button
-                    type="button"
-                    class="btn cancel"
-                    onclick="closeForm()"
-                  >
-                    Адхіліць
-                  </button>
-                </form>
-              </div>
-              <div class="form-popup" id="sendForm">
-                <form class="form-container">
-                  <p>
-                    Mы атрымалі ваша паведамленне. У бліжэйшы час нашы
-                    супрацоўнікі звяжуцца з вамі.
-                  </p>
-                  <button
-                    type="button"
-                    class="btn cancel"
-                    onclick="closeSendForm()"
-                  >
-                    Закрыць
-                  </button>
-                </form>
+              <div class="border-button">
+                <a onclick="openForm()"
+                  ><i class="fa-solid fa-phone-volume"></i
+                ></a>
               </div>
             </div>
+            <div class="form-popup" id="myForm">
+              <form action="" class="form-container">
+                <h3>Зваротны званок</h3>
+                <br />
+                <label for="name"><b>Ваша імя</b></label>
+                <input type="text" placeholder="Iмя" required />
+                <label for="phone"><b>Ваш нумар тэлефона</b></label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Hумар тэлефона"
+                  required
+                />
+
+                <button type="button" class="btn" onclick="sendForm()">
+                  Адправіць
+                </button>
+                <button type="button" class="btn cancel" onclick="closeForm()">
+                  Адхіліць
+                </button>
+              </form>
+            </div>
+            <div class="form-popup" id="sendForm">
+              <form class="form-container">
+                <p>
+                  Mы атрымалі ваша паведамленне. У бліжэйшы час нашы
+                  супрацоўнікі звяжуцца з вамі.
+                </p>
+                <button
+                  type="button"
+                  class="btn cancel"
+                  onclick="closeSendForm()"
+                >
+                  Закрыць
+                </button>
+              </form>
+            </div>
+            <!-- </div> -->
           </div>
         </div>
       </footer>
