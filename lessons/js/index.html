@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // let sqrt = Math.sqrt(379);
+    // let fix1 = sqrt.toFixed(0);
+    // let fix2 = sqrt.toFixed(1);
+    // let fix3 = sqrt.toFixed(2);
+    // console.log(fix1);
+    // console.log(fix2);
+    // console.log(fix3);
+
+    // let sqrt2 = Math.sqrt(587);
+    // let ceil = Math.ceil(sqrt2);
+    // let floor = Math.floor(sqrt2);
+    // console.log(ceil);
+    // console.log(floor);
+
+    // let min = Math.min(4, -2, 5, 19, -130, 0, 10);
+    // let max = Math.max(4, -2, 5, 19, -130, 0, 10);
+    // console.log(min);
+    // console.log(max);
+
+    // 3.С помощью цикла заполните массив 10-ю случайными целыми числами от  1 до 100.
+
+    // let array = [];
+    // for (let index = 0; index < 10; index++) {
+    //   let i = Math.random() * 100;
+
+    //   array[index] = i.toFixed(0);
+    // }
+
+    // console.table(array);
+
+    // let str = "JS";
+    // console.log(str.toLowerCase());
+
+    // let name = "Poluhina Yuliana";
+    // console.log(name.toUpperCase());
+
+    // let str = "спелые яблоки";
+    // let substr = "яблоки";
+    // //optional 1   index/-1
+    // let opt1 = str.indexOf(substr);
+    // console.log(opt1);
+
+    // //optional 2
+    // let opt2 = str.includes(substr, 0);
+    // console.log(opt2);
+
+    // let substr = "script";
+
+    // function name(str) {
+    //   //optional 1   index/-1
+    //   let opt1 = str.indexOf(substr);
+    //   if (opt1 >= 0) {
+    //     console.log(true);
+    //   } else {
+    //     console.log(false);
+    //   }
+
+    //   //optional 2
+    //   let opt2 = str.includes(substr, 0);
+    //   console.log(opt2);
+    // }
+
+    // name("it is");
+
+    //     6.Написать функцию, которая принимает строку в качестве аргументов и проверяет
+    //    начинается ли эта строка на 'http://' или 'https://'
+
+    // 7.Написать функцию, которая принимает строку в качестве аргументов и проверяет
+    //    Заканчивается ли эта строка на .com или .by или .ru
+
+    // let str = "I like js";
+    // let substr = "js";
+
+    // let start = str.startsWith(substr);
+    // let end = str.endsWith(substr);
+    // console.log(start);
+    // console.log(end);
+
+    // function find1(str) {
+    //   let http = "http://";
+    //   let https = "https://";
+    //   let startHttp = str.startsWith(http);
+    //   let startHttps = str.startsWith(https);
+    //   console.log(startHttp || startHttps);
+    // }
+
+    // function find2(str) {
+    //   let com = ".com";
+    //   let by = ".by";
+    //   let ru = ".ru";
+    //   let endcom = str.endsWith(com);
+    //   let endby = str.endsWith(by);
+    //   let endru = str.endsWith(ru);
+    //   console.log(endcom || endby || endru);
+    // }
+
+    // find1("https://google.com");
+    // find2("https://google.com");
+
+    //return substring
+    //opt1
+    // let str = "JavaScript is a programming language.";
+    // console.log(str.slice(27, 36));
+
+    // //opt2
+    // console.log(str.substring(27, 36));
+
+    // //opt3
+    // console.log(str.substr(27, 9));
+
+    // 9.  Есть стоимость в виде строки "$120" или “€1200”. То есть сначала идёт знак валюты, а затем – число.
+    // Создайте функцию extractValue(str), которая будет из такой строки выделять числовое значение и возвращать его.
+    function name(str) {
+      console.log(str.substring(1));
+    }
+
+    name("$120");
+    name("€1200");
+
+    //   10.Напишите функцию upFirstLetter(str), которая возвращает строку str с заглавным первым символом.
+
+    // Например: "вася" -> "Вася"
+    // 	       “добро пожаловать” -> “Добро пожаловать”
+
+    function upFirstLetter(str) {
+      let firstChar = str.charAt(0);
+      let upper = firstChar.toUpperCase();
+      let rest = str.slice(1);
+      let result = upper + rest;
+      console.log(result);
+    }
+
+    upFirstLetter("вася");
+  </script>
+</html>
