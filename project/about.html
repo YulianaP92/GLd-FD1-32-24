@@ -13,6 +13,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="icon" href="images/favicon_brest.svg" sizes="32x32" />
     <title>Travel around Belarus</title>
   </head>
   <script
@@ -467,6 +468,11 @@
       padding-top: 5px;
     }
 
+    .fa-asterisk:before {
+      color: red;
+      padding-left: 10px;
+    }
+
     ul.info {
       border-top: 1px solid #eee;
       border-bottom: 1px solid #eee;
@@ -551,6 +557,12 @@
       .main-button a {
         display: block;
         margin-top: -30px;
+      }
+    }
+
+    @media (max-width: 530px) {
+      .image img {
+        display: none;
       }
     }
 
@@ -840,19 +852,30 @@
               <form action="" class="form-container">
                 <h3>Зваротны званок</h3>
                 <br />
-                <label for="name"><b>Ваша імя</b></label>
-                <input type="text" placeholder="Iмя" required />
-                <label for="phone"><b>Ваш нумар тэлефона</b></label>
+                <label for="name"
+                  ><b>Ваша імя</b
+                  ><i class="fa fa-asterisk" aria-hidden="true"></i
+                ></label>
+                <input
+                  type="text"
+                  placeholder="Iмя"
+                  oninvalid="this.setCustomValidity('Калі ласка, увядзіце карэктныя дадзеныя')"
+                  required
+                />
+                <label for="phone"
+                  ><b>Ваш нумар тэлефона</b
+                  ><i class="fa fa-asterisk" aria-hidden="true"></i
+                ></label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
-                  placeholder="Hумар тэлефона"
+                  oninvalid="this.setCustomValidity('Калі ласка, увядзіце карэктныя дадзеныя')"
+                  pattern="[\+]375\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                  placeholder="+375 (XX) XXX-XX-XX"
                   required
                 />
-                <button type="button" class="btn" onclick="sendForm()">
-                  Адправіць
-                </button>
+                <button type="submit" class="btn">Адправіць</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">
                   Адхіліць
                 </button>
