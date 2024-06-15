@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="field" />
+    <div id="message">Ввeдите слово</div>
+  </body>
+  <script>
+    let listWords = [];
+
+    var input = document.getElementById("field");
+    input.addEventListener("keydown", function (e) {
+      if (e.code === "Enter") {
+        let inputIsValid = isValid(input.value);
+        if (inputIsValid) {
+          playGame();
+        }
+      }
+    });
+
+    function isValid(input) {
+      if (input == null || input == undefined || input == "" || input == " ") {
+        document.getElementById(
+          "message"
+        ).textContent = `Значение не было введено`;
+
+        clearInput();
+        return false;
+      }
+
+      if (listWords.length !== 0) {
+        let firstCurrentChar = input.toLowerCase().charAt(0);
+        let lastPreviousWord = listWords[listWords.length - 1];
+        let lastPreviousChar = lastPreviousWord.slice(-1);
+
+        if (firstCurrentChar !== lastPreviousChar) {
+          document.getElementById(
+            "message"
+          ).textContent = `Вам нужно ввести слово на букву ${lastPreviousChar}`;
+
+          clearInput();
+          return false;
+        }
+      }
+
+      if (listWords.includes(input.toLowerCase())) {
+        document.getElementById(
+          "message"
+        ).textContent = `Данное слово уже было введено ранее`;
+
+        clearInput();
+        return false;
+      }
+
+      return true;
+    }
+
+    function playGame() {
+      let word = document.getElementById("field").value.toLowerCase();
+      listWords[listWords.length] = word;
+
+      clearInput();
+      document.getElementById(
+        "message"
+      ).textContent = `Введите следующее слово, которое начинается на букву ${
+        word[word.length - 1]
+      }\n`;
+    }
+
+    function clearInput() {
+      document.getElementById("field").value = "";
+    }
+  </script>
+</html>
