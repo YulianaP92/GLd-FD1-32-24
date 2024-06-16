@@ -13,7 +13,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="icon" href="images/favicon_brest.svg" sizes="32x32" />
+    <link rel="icon" href="images/ticket.png" sizes="32x32" />
     <title>Travel around Belarus</title>
   </head>
   <script
@@ -128,6 +128,13 @@
     #mainArticle {
       grid-area: article;
       margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("images/form.jpg");
+      background-size: cover;
+      background-position: center;
     }
 
     #pageHeader {
@@ -298,7 +305,7 @@
     }
 
     .header-area.header-sticky {
-      min-height: 80px;
+      min-height: 90px;
     }
 
     .header-area.header-sticky .nav li a.active {
@@ -486,11 +493,6 @@
       font-size: 14px;
     }
 
-    #mainArticle {
-      margin-left: 20px;
-      margin-right: 20px;
-    }
-
     .fa {
       padding-right: 10px;
     }
@@ -583,9 +585,6 @@
       .call-to-action .row .col-lg-6 {
         visibility: hidden;
         width: 0px !important;
-      }
-      #pageFooter {
-        margin-top: 150px;
       }
     }
 
@@ -681,6 +680,95 @@
         visibility: hidden;
       }
     }
+
+    /* form */
+    .mainArticle_container {
+      background-color: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      box-sizing: border-box;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      margin-top: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+      padding-top: 10px;
+      font-style: italic;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="date"] {
+      padding: 9px 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px 20px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 8px;
+      }
+    }
+
+    /* https://habr.com/ru/articles/332804/ */
+    input:invalid {
+      border-color: red;
+    }
+    select:invalid {
+      border-color: red;
+    }
+    input:valid {
+      border-color: green;
+    }
+    select:valid {
+      border-color: green;
+    }
   </style>
   <body>
     <div class="gridContainer">
@@ -701,7 +789,7 @@
                     >
                   </li>
                   <li><a href="https://nashaniva.com/">Навіны</a></li>
-                  <li><a href="tickets.html">Білеты</a></li>
+                  <li><a href="about.html">Білеты</a></li>
                   <li>
                     <a
                       href="https://yandex.by/maps/149/belarus/?ll=27.701393%2C52.858248&z=7"
@@ -719,101 +807,63 @@
         </div>
       </header>
       <article id="mainArticle">
-        <div>
-          <div class="image">
-            <img src="images/Brest_261.jpg" alt="brest" />
-          </div>
-        </div>
-        <div>
-          <div class="right-content">
-            <h3>Брэст</h3>
-            <p>
-              Горад належыць да ліку найстаражытных славянскіх паселішчаў.
-              Упершыню згадваецца ў Наўгародскім першым (сінадальным) летапісе
-              пад 1017 г.Брэст — пяты горад на тэрыторыі цяперашняй Беларусі,
-              раней згаданыя толькі Полацк, Віцебск, Тураў і Ваўкавыск. З
-              04.12.1939 цэнтр Брэсцкай вобласці БССР (з 1991 Рэспублікі
-              Беларусь).
-            </p>
-            <h4>Гісторыя</h4>
-            <p>
-              Археалагічныя даследаванні горада паказалі, што як пагранічная
-              крэпасць і апорны пункт славянскай каланізацыі горад быў заснаваны
-              ў канцы Χ стагоддзя. Агульнае аблічча матэрыяльнай культуры
-              старажытнага Берасця пацвярджае яго заснаванне адным з
-              усходне-славянскіх плямён — дрыгавічамі. Адносна дакладнасці дат
-              першага ўспаміну думкі гісторыкаў разыходзяцца. Дакладна вядома,
-              што звязана першае ўпамінанне з падзеямі 1015—1019, калі кіеўскі
-              князь Святаполк Уладзіміравіч вёў барацьбу за кіеўскі сталец са
-              сваім братам наўгародскім князем Яраславам Уладзіміравічам.
-              Упершыню ўпамінаецца пад 1019 годам[24]. Такога пункту гледжання
-              прытрымліваецца Пётр Лысенка, абапіраючыся на «Аповесць мінулых
-              гадоў» і складзеныя на яе аснове пазнейшыя зборы, дзе пра паход
-              1017 года ў Пабужжа нічога не сказана. Другая група даследчыкаў —
-              М. Карамзін, С. Салаўёў, Г. Лаўмянскі, Г. Штыхаў і інш. давяраюць
-              сказанаму ў першым спісе Наўгародскага летапісу: " в лето 6525
-              (1017) Ярослав иде к Берестью ". Старажытнае Берасце, размешчанае
-              на сутоку рэк, кантралявала водныя шляхі па Мухаўцу з усходу, ад
-              дняпроўскага вялікага воднага шляху «з варагаў у грэкі» да Буга і
-              па Бугу — шлях з поўдня, з Валыні — да Балтыйскага мора. З самага
-              пачатку існавання Берасце адыгрывала ролю палітычнага,
-              эканамічнага, адміністрацыйнага і культурнага цэнтра Пабужжа.
-              Горад быў гандлёвым цэнтрам Старажытнарускай дзяржавы на мяжы з
-              польскімі і літоўскім ўладаннямі. З прычыны прыгранічнага
-              размяшчэння часта быў у цэнтры ваенных падзей. У 1020 годзе
-              Берасцем авалодаў польскі князь Баляслаў Храбры. У 1022, 1031 і
-              1044 гадах кіеўскі князь Яраслаў Уладзіміравіч здзейсніў паходы да
-              Берасця, які, як можна меркаваць, быў заняты палякамі. Наступны
-              ўспамін Бярэсця ў летапісе звязана з барацьбой Ізяслава Яраславіча
-              з яго братамі Святаполкам і Усеваладам за кіеўскі сталец[28].
-            </p>
-            <div>
-              <div class="image" style="float: right">
-                <img src="images/brest-history.jpg" alt="brest" />
-              </div>
+        <div class="mainArticle_container">
+          <h3>Бланк браніравання пуцёўкі</h3>
+          <form action="index.html">
+            <div class="form-group">
+              <label for="name">Імя</label>
+              <input type="text" id="name" name="name" required />
+              <label for="lastName">Прозвішча</label>
+              <input type="text" id="lastName" name="lastName" required />
+              <label for="secondName">Iмя па бацьку</label>
+              <input type="text" id="secondName" name="secondName" required />
             </div>
-            <p>
-              У «Павучанні» Уладзіміра Манамаха гаворыцца, што ў 1070-я гады
-              яго, па даручэнні праціўнікаў Ізяслава, пасылалі пільнаваць
-              Берасце, спалены палякамі. Пётр Лысенка лічыць, што гэта адбылося
-              ў 1073 годзе, пасля таго як кіеўскі князь Ізяслаў Яраславіч быў
-              выгнаны з Кіева і ўцёк да польскага караля Баляслава II Смелага. У
-              1097 годзе вялікі князь кіеўскі Святаполк Ізяславіч выгнаў з
-              Берасця валынскага князя Давыда Ігаравіча. У гэтых паведамленнях
-              Берасце названы горадам, што азначае існаванне там абарончых
-              збудаванняў. Дзяцінец (трохвугольнай у плане формы, умацаваны з
-              боку поля ровам, замляным валам і частаколам), найбольш умацаваная
-              старажытная частка Берасця, размяшчалася на мысе, утвораным правым
-              берагам ракі Заходні Буг і левым берагам левага рукава р. Мухавец.
-              Вакольны горад месціўся супраць дзядзінца, на востраве, утвораным
-              2 рукавамі р. Мухавец у месцы ўпадзення яе ў Заходні Буг. Тут
-              выяўлена неўмацаванае паселішча, якое датуецца матэрыяламі X
-              стагоддзя. На дзяцінцы раскапаны вуліцы з драўляным насцілам,
-              рэшткі больш як 200 жылых і гаспадарчых пабудоў. Знойдзены
-              сведчанні развіцця тут рамёстваў, гандлевых і культурных сувязей з
-              гарадамі старажытнай Русі і суседнімі краінамі[27]. Меркаваны
-              выгляд Берасця ў XII—XIII стагоддзях У 1146 годзе горад у складзе
-              Тураўскага княства. З другой паловы XII стагоддзя Берасце
-              уваходзіла ў склад Уладзіміра-Валынскага княства. З 1199 года ў
-              складзе Галіцка-Валынскага княства. У XII стагоддзі на месцы
-              дзядзінца пабудаваны драўляны замак (адноўлены ў другой палове
-              XIII стагоддзя). На працягу XII—XIII стагоддзяў летапісы
-              неаднаразова адзначалі спробы Берасця стаць цэнтрам самастойнага
-              княства. Падчас мангола-татарскага нашэсця паблізу Берасця
-              адбылася жорсткая бітва, але горад, відаць, не быў захоплены. З
-              1272 года Берасцем валодаў валынскі князь Уладзімір Васількавіч, а
-              з 1289 года — Мсціслаў Данілавіч. У 1276—1288 гадах на тэрыторыі
-              замка валынскім князем Уладзімірам Васількавічам была ўзведзена
-              мураваная вежа-данжон (лёс яе невядомы, малаверагодна што знесена
-              пры пабудове Брэсцкай крэпасці). У XIII стагоддзі сінхронна з
-              вежай у горадзе была змуравана царква Св. Пятра.
-            </p>
-            <ul class="info">
-              <li><i class="fa fa-user"></i> 344 470 чалавек</li>
-              <li><i class="fa fa-globe"></i>146,12 км²</li>
-              <li><i class="fa fa-users"></i>2343.7 чел./км²</li>
-            </ul>
-          </div>
+            <div class="form-group">
+              <label for="email">Электронная пошта</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Нумар тэлефона</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[\+]375\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                placeholder="+375 (XX) XXX-XX-XX"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="city">Горад</label>
+              <select id="city" name="city" required>
+                <option value="" disabled selected>Выбераце горад</option>
+                <option value="minsk">Mінск</option>
+                <option value="brest">Брэст</option>
+                <option value="gomel">Гомель</option>
+                <option value="mogilev">Магiлёу</option>
+                <option value="grodno">Гродна</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="travel-date">Дата падарожжа</label>
+              <input type="date" id="travel-date" name="travel-date" required />
+            </div>
+            <div class="form-group">
+              <label for="travelers">Колькасць падарожнікаў</label>
+              <input
+                type="number"
+                id="travelers"
+                name="travelers"
+                min="1"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="comments">Дадатковыя каментары</label>
+              <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            <button type="submit">Забраніраваць зараз</button>
+          </form>
         </div>
       </article>
       <footer id="pageFooter">
@@ -821,12 +871,14 @@
           <div class="container">
             <div class="button-group">
               <div class="border-button">
-                <a href="https://pass.rw.by/ru/"
-                  ><i class="fa-solid fa-train"></i
+                <a href="https://belavia.by/"
+                  ><i class="fa-solid fa-plane"></i
                 ></a>
               </div>
               <div class="border-button">
-                <a href="tickets.html"><i class="fa-solid fa-ticket"></i></a>
+                <a href="reservation.html"
+                  ><i class="fa-solid fa-ticket"></i
+                ></a>
               </div>
               <div class="border-button">
                 <a onclick="openForm()"
@@ -911,6 +963,8 @@
         first.checked = true;
       }
     }
+
+    // var bannerTimer = setInterval(bannerSwitcher, 2000);
 
     function openForm() {
       document.getElementById("myForm").style.display = "block";

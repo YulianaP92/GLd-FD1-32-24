@@ -83,8 +83,7 @@ reset
     section,
     article,
     aside,
-    footer,
-    hgroup {
+    footer {
       display: block;
     }
 
@@ -143,7 +142,6 @@ reset
         "footer footer footer";
       grid-template-rows: 90px 1fr auto;
       grid-template-columns: 20% 1fr 15%;
-      /* grid-gap: 10px; */
       height: 100vh;
       margin: 0;
     }
@@ -1068,16 +1066,13 @@ Banner Style
       box-shadow: 0 20px 40px 0 rgba(11, 99, 246, 1);
     }
 
-    /* 
----------------------------------------------
-Footer Style
---------------------------------------------- 
-*/
+    /* Footer Style */
+
+    /* Footer Style */
 
     footer {
       background-color: #22b3c1;
       text-align: center;
-      /* padding: 25px 0px; */
     }
 
     footer p {
@@ -1105,19 +1100,6 @@ Footer Style
       text-align: center;
       margin-top: 30px;
     }
-    /* .call-to-action h2 {
-      font-size: 40px;
-      color: #fff;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    } */
-
-    /* .call-to-action h4 {
-      font-size: 20px;
-      color: #fff;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    } */
 
     .call-to-action .border-button {
       text-align: right;
@@ -1139,7 +1121,37 @@ Footer Style
       padding-right: 10px;
     }
 
-    /* {box-sizing: border-box;} */
+    @media (max-width: 993px) {
+      .call-to-action .row .col-lg-6 {
+        visibility: hidden;
+        width: 0px !important;
+      }
+      #pageFooter {
+        margin-top: 150px;
+      }
+    }
+
+    .button-group {
+      float: right;
+    }
+
+    .button-group .border-button {
+      float: left;
+      padding-right: 100px;
+    }
+
+    @media (max-width: 370px) {
+      .call-to-action .container .button-group div:nth-of-type(1),
+      .call-to-action .container .button-group div:nth-of-type(3) {
+        visibility: hidden;
+      }
+    }
+
+    @media (max-width: 990px) {
+      .button-group .border-button {
+        padding-right: 20px !important;
+      }
+    }
 
     /* Button used to open the contact form - fixed at the bottom of the page */
     .open-button {
@@ -1232,6 +1244,16 @@ Footer Style
     @media (max-width: 915px) {
       .call-to-action .row > * {
         width: auto !important;
+      }
+    }
+
+    @media (max-width: 770px) {
+      .call-to-action .container p {
+        visibility: hidden;
+      }
+      .call-to-action .container {
+        margin-left: 0;
+        margin-right: 0;
       }
     }
   </style>
@@ -1763,88 +1785,77 @@ Footer Style
       </article>
 
       <footer id="pageFooter">
-        <!-- <p>
-          Copyright © 2024
-          <a
-            href="https://be.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C"
-            >Вікіпедыя</a
-          >
-        </p> -->
         <div class="call-to-action">
           <div class="container">
-            <div class="row">
-              <div class="col-lg-6">
+            <div class="button-group">
+              <div class="border-button">
+                <a href="https://pass.rw.by/ru/"
+                  ><i class="fa-solid fa-train"></i
+                ></a>
+              </div>
+              <div class="border-button">
+                <a href="tickets.html"><i class="fa-solid fa-ticket"></i></a>
+              </div>
+              <div class="border-button">
+                <a onclick="openForm()"
+                  ><i class="fa-solid fa-phone-volume"></i
+                ></a>
+              </div>
+            </div>
+            <p>
+              Copyright © 2024
+              <a
+                href="https://be.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C"
+                >Вікіпедыя</a
+              >
+            </p>
+            <div class="form-popup" id="myForm">
+              <form action="" class="form-container">
+                <h3>Зваротны званок</h3>
+                <br />
+                <label for="name"
+                  ><b>Ваша імя</b
+                  ><i class="fa fa-asterisk" aria-hidden="true"></i
+                ></label>
+                <input
+                  type="text"
+                  placeholder="Iмя"
+                  oninvalid="this.setCustomValidity('Калі ласка, увядзіце карэктныя дадзеныя')"
+                  required
+                />
+                <label for="phone"
+                  ><b>Ваш нумар тэлефона</b
+                  ><i class="fa fa-asterisk" aria-hidden="true"></i
+                ></label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  oninvalid="this.setCustomValidity('Калі ласка, увядзіце карэктныя дадзеныя')"
+                  pattern="[\+]375\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+                  placeholder="+375 (XX) XXX-XX-XX"
+                  required
+                />
+                <button type="submit" class="btn">Адправіць</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">
+                  Адхіліць
+                </button>
+              </form>
+            </div>
+            <div class="form-popup" id="sendForm">
+              <form class="form-container">
                 <p>
-                  Copyright © 2024
-                  <a
-                    href="https://be.wikipedia.org/wiki/%D0%91%D0%B5%D0%BB%D0%B0%D1%80%D1%83%D1%81%D1%8C"
-                    >Вікіпедыя</a
-                  >
+                  Mы атрымалі ваша паведамленне. У бліжэйшы час нашы
+                  супрацоўнікі звяжуцца з вамі.
                 </p>
-              </div>
-              <div class="col-lg-2">
-                <div class="border-button">
-                  <a href="https://belavia.by/"
-                    ><i class="fa-solid fa-plane"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-2">
-                <div class="border-button">
-                  <a href="reservation.html"
-                    ><i class="fa-solid fa-ticket"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-2">
-                <div class="border-button">
-                  <a onclick="openForm()"
-                    ><i class="fa-solid fa-phone-volume"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="form-popup" id="myForm">
-                <form action="" class="form-container">
-                  <h3>Зваротны званок</h3>
-                  <br />
-                  <label for="name"><b>Ваша імя</b></label>
-                  <input type="text" placeholder="Iмя" required />
-                  <label for="phone"><b>Ваш нумар тэлефона</b></label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="Hумар тэлефона"
-                    required
-                  />
-
-                  <button type="button" class="btn" onclick="sendForm()">
-                    Адправіць
-                  </button>
-                  <button
-                    type="button"
-                    class="btn cancel"
-                    onclick="closeForm()"
-                  >
-                    Адхіліць
-                  </button>
-                </form>
-              </div>
-              <div class="form-popup" id="sendForm">
-                <form class="form-container">
-                  <p>
-                    Mы атрымалі ваша паведамленне. У бліжэйшы час нашы
-                    супрацоўнікі звяжуцца з вамі.
-                  </p>
-                  <button
-                    type="button"
-                    class="btn cancel"
-                    onclick="closeSendForm()"
-                  >
-                    Закрыць
-                  </button>
-                </form>
-              </div>
+                <button
+                  type="button"
+                  class="btn cancel"
+                  onclick="closeSendForm()"
+                >
+                  Закрыць
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -1869,7 +1880,7 @@ Footer Style
       }
     }
 
-    // var bannerTimer = setInterval(bannerSwitcher, 2000);
+    var bannerTimer = setInterval(bannerSwitcher, 2000);
 
     function openForm() {
       document.getElementById("myForm").style.display = "block";
