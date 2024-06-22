@@ -1,7 +1,14 @@
 @import url("common.css");
-
-.header-area.header-sticky {
-  min-height: 80px;
+#mainArticle {
+  grid-area: article;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/form.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /* Body Styles */
@@ -74,32 +81,6 @@ p {
   box-shadow: 0 20px 40px 0 rgba(11, 99, 246, 1);
 }
 
-.call-to-action h2,
-.call-to-action p {
-  text-align: center;
-}
-
-.call-to-action .border-button {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.call-to-action .border-button {
-  text-align: right;
-  margin-top: 20px;
-}
-
-.call-to-action .border-button a {
-  color: #fff;
-  border-color: #fff;
-  box-shadow: 4px 6px 18px 15px rgba(0, 0, 0, 0.75);
-}
-
-.call-to-action .border-button a:hover {
-  background-color: #fff;
-  color: #22b3c1;
-}
-
 .nav .map-span {
   padding-right: 10px;
 }
@@ -162,11 +143,6 @@ ul.info li {
   font-size: 14px;
 }
 
-#mainArticle {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
 .fa {
   padding-right: 10px;
 }
@@ -226,9 +202,6 @@ ul.info li {
   .call-to-action .row .col-lg-6 {
     visibility: hidden;
     width: 0px !important;
-  }
-  #pageFooter {
-    margin-top: 150px;
   }
 }
 
@@ -323,4 +296,93 @@ ul.info li {
   .more-info {
     visibility: hidden;
   }
+}
+
+/* form */
+.mainArticle_container {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 0;
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  padding-top: 10px;
+  font-style: italic;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="date"] {
+  padding: 9px 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px 20px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* https://habr.com/ru/articles/332804/ */
+input:invalid {
+  border-color: red;
+}
+select:invalid {
+  border-color: red;
+}
+input:valid {
+  border-color: green;
+}
+select:valid {
+  border-color: green;
 }

@@ -14,7 +14,9 @@
       crossorigin="anonymous"
     />
     <link rel="icon" href="images/favicon_gomel.svg" sizes="32x32" />
+    <link href="css/header.css" rel="stylesheet" type="text/css" />
     <link href="css/about.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/common.js"></script>
     <title>Падарожжа па Беларусі</title>
   </head>
   <script
@@ -49,7 +51,7 @@
                   </li>
                 </ul>
                 <a class="menu-trigger" onclick="expandMenu()">
-                  <span>Menu</span>
+                  <span></span>
                 </a>
               </nav>
             </div>
@@ -228,60 +230,4 @@
       </footer>
     </div>
   </body>
-  <script>
-    function bannerSwitcher() {
-      let checkedValue = document.querySelector(".sec-1-input:checked");
-      let next = checkedValue?.nextElementSibling;
-
-      let isInput = next.classList.contains("sec-1-input");
-
-      if (isInput && next != null && next != undefined) {
-        let checkedValue = (document.querySelector(
-          ".sec-1-input:checked"
-        ).checked = false);
-        next.checked = true;
-      } else {
-        let first = document.querySelectorAll(".sec-1-input")[0];
-        first.checked = true;
-      }
-    }
-
-    function openForm() {
-      document.getElementById("myForm").style.display = "block";
-    }
-
-    function closeForm() {
-      document.getElementById("myForm").style.display = "none";
-    }
-
-    function closeSendForm() {
-      document.getElementById("sendForm").style.display = "none";
-    }
-
-    function sendForm() {
-      document.getElementById("myForm").style.display = "none";
-      document.getElementById("sendForm").style.display = "block";
-    }
-
-    function expandMenu() {
-      let ul = document.querySelector(
-        "body > div > header > div > div > div > nav > ul"
-      );
-      if (ul.style.display == "block") {
-        ul.style.display = null;
-      } else {
-        ul.style.display = "block";
-      }
-
-      var ancor = document.querySelector(
-        "body > div > header > div > div > div > nav > a.menu-trigger"
-      );
-
-      if (ancor.classList.contains("active")) {
-        ancor.classList.remove("active");
-      } else {
-        ancor.classList.add("active");
-      }
-    }
-  </script>
 </html>
