@@ -396,6 +396,19 @@ footer p a:hover {
   font-size: 10px;
 }
 
+.error {
+  display: none;
+  color: red;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: 0.875em;
+}
+
+/* Custom error message */
+input:invalid + .error {
+  display: block;
+}
+
 /* Анимация вращения */
 @keyframes spin {
   0% {

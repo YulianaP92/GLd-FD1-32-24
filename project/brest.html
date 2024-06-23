@@ -181,19 +181,17 @@
               >
             </p>
             <div class="form-popup" id="myForm">
-              <form action="" class="form-container">
+              <form action="" id="callForm" class="form-container">
                 <h3>Зваротны званок</h3>
                 <br />
                 <label for="name"
                   ><b>Ваша імя</b
                   ><i class="fa fa-asterisk" aria-hidden="true"></i
                 ></label>
-                <input
-                  type="text"
-                  placeholder="Iмя"
-                  oninvalid="this.setCustomValidity('Калі ласка, увядзіце карэктныя дадзеныя')"
-                  required
-                />
+                <input type="text" id="name" placeholder="Iмя" required />
+                <span class="error" aria-live="polite"
+                  >Калі ласка, увядзіце карэктныя дадзеныя</span
+                >
                 <label for="phone"
                   ><b>Ваш нумар тэлефона</b
                   ><i class="fa fa-asterisk" aria-hidden="true"></i
@@ -201,30 +199,16 @@
                 <input
                   type="tel"
                   id="phone"
-                  name="phone"
-                  oninvalid="this.setCustomValidity('Калі ласка, увядзіце карэктныя дадзеныя')"
                   pattern="[\+]375\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
                   placeholder="+375 (XX) XXX-XX-XX"
                   required
                 />
+                <span class="error" aria-live="polite"
+                  >Калі ласка, увядзіце карэктныя дадзеныя</span
+                >
                 <button type="submit" class="btn">Адправіць</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">
                   Адхіліць
-                </button>
-              </form>
-            </div>
-            <div class="form-popup" id="sendForm">
-              <form class="form-container">
-                <p>
-                  Mы атрымалі ваша паведамленне. У бліжэйшы час нашы
-                  супрацоўнікі звяжуцца з вамі.
-                </p>
-                <button
-                  type="button"
-                  class="btn cancel"
-                  onclick="closeSendForm()"
-                >
-                  Закрыць
                 </button>
               </form>
             </div>
